@@ -99,7 +99,7 @@ public class LoginToAppmaker {
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
-	@Test(enabled = false) // (priority=3)
+	/*@Test(enabled = false) // (priority=3)
 	public void CreateNewApp() throws Exception {
 
 	
@@ -120,7 +120,7 @@ public class LoginToAppmaker {
 		WebElement Element = driver.findElement(By.cssSelector("#tab-content-0 > div > div:nth-child(7) > div > div.col-md-5.text-left > div.padding-top.margin-top"));
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		Thread.sleep(4000);*/
-
+/*
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
 		a.get(0).click();
 		
@@ -272,4 +272,4 @@ public class LoginToAppmaker {
 	}
 	
 	
-}
+
