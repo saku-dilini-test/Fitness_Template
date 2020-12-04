@@ -44,7 +44,7 @@ public class LoginToAppmaker {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		options.addArguments("--disable-setuid-sandbox', '--no-sandbox");
-		options.addArguments("window-size=1366,768");
+		options.addArguments("window-size=1920,1080");
 		
 		driver = new ChromeDriver(options);
 		System.out.println("Browser launched");
