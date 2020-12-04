@@ -24,7 +24,7 @@ public class LoginToAppmaker {
 
 	public String baseURL ="https://appmakercms.otenro.com/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
-	String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
+	//String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
 	//String driverPath ="/usr/bin/google-chrome";
 	
 	public WebDriver driver;
