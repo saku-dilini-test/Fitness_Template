@@ -24,7 +24,7 @@ public class LoginToAppmaker {
 
 	public String baseURL ="https://appmakercms.otenro.com/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
-	//String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
+	String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
 	//String driverPath ="/usr/bin/google-chrome";
 	
 	public WebDriver driver;
@@ -43,8 +43,13 @@ public class LoginToAppmaker {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
-		options.addArguments("--disable-setuid-sandbox', '--no-sandbox");
-		options.addArguments("window-size=1920,1080");
+		options.addArguments("window-size=1400,1500");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--no-sandbox");
+		options.addArguments("start-maximized");
+		options.addArguments("enable-automation");
+		options.addArguments("--disable-infobars");
+		options.addArguments("--disable-dev-shm-usage");
 		
 		driver = new ChromeDriver(options);
 		System.out.println("Browser launched");
