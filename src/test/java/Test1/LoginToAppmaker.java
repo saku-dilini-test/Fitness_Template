@@ -37,7 +37,7 @@ public class LoginToAppmaker {
 	
 
 		System.out.println("Launching Chrome Browser ");
-		System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 		//System.setProperty("webdriver.chrome.driver",driverPath);
 		//System.setProperty("webdriver.chrome.logfile",driverPath);
 		
@@ -51,10 +51,10 @@ public class LoginToAppmaker {
 		options.addArguments("--disable-infobars");
 		options.addArguments("--disable-dev-shm-usage");
 		
-		//driver = new ChromeDriver(options);
+		driver = new ChromeDriver(options);
 		System.out.println("Browser launched");
 		//driver.manage().window().maximize();
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
@@ -63,7 +63,7 @@ public class LoginToAppmaker {
 	public void VerifyLoginPage() throws Exception {
 	
 
-		//driver.get(baseURL);
+		driver.get(baseURL);
 
 		//driver.findElement(By.name("Login_btn")).click();
 		//Thread.sleep(2000);
