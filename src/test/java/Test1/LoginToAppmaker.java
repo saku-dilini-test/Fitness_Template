@@ -51,7 +51,7 @@ public class LoginToAppmaker {
 		options.addArguments("--disable-infobars");
 		options.addArguments("--disable-dev-shm-usage");
 		
-		driver = new ChromeDriver(options);
+		//driver = new ChromeDriver(options);
 		System.out.println("Browser launched");
 		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
