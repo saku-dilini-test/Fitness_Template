@@ -37,7 +37,7 @@ public class LoginToAppmaker {
 	
 
 		System.out.println("Launching Chrome Browser ");
-		System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 		//System.setProperty("webdriver.chrome.driver",driverPath);
 		//System.setProperty("webdriver.chrome.logfile",driverPath);
 		
