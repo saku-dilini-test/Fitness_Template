@@ -63,7 +63,7 @@ public class LoginToAppmaker {
 	public void VerifyLoginPage() throws Exception {
 	
 
-		driver.get(baseURL);
+		//driver.get(baseURL);
 
 		//driver.findElement(By.name("Login_btn")).click();
 		//Thread.sleep(2000);
