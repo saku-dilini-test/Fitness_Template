@@ -104,7 +104,7 @@ public class LoginToAppmaker {
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
-	@Test(enabled = false) // (priority=3)
+	/*@Test(enabled = false) // (priority=3)
 	public void CreateNewApp() throws Exception {
 
 	
