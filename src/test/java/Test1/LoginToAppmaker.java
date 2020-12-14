@@ -65,7 +65,7 @@ public class LoginToAppmaker {
 		
 		System.out.println("Browser launched"); 
 		
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
