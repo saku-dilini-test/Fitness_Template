@@ -53,7 +53,7 @@ public class LoginToAppmaker {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
-		options.addArguments("window-size=1980,1080");
+		options.addArguments("--window-size=1400,600");
 		options.addArguments("--disable-gpu");
 		options.addArguments("--no-sandbox");
 		options.addArguments("start-maximized");
