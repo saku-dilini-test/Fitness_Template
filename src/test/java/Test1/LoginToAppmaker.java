@@ -52,7 +52,7 @@ public class LoginToAppmaker {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
-		options.addArguments("window-size=1400,1500");
+		options.addArguments("window-size=1366,768");
 		options.addArguments("--disable-gpu");
 		options.addArguments("--no-sandbox");
 		options.addArguments("start-maximized");
@@ -113,17 +113,15 @@ public class LoginToAppmaker {
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
 
-		
+		  WebElement element = driver.findElement(By.name("Create_New_App"));
+		  JavascriptExecutor executor = (JavascriptExecutor)driver; 
+		  executor.executeScript("arguments[0].click();", element);
 
 		//driver.findElement(By.name("Create_New_App")).click();
 		//System.out.println("Select a app button clicked");
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   
-	    WebElement element = driver.findElement(By.name("Create_New_App"));
-	    JavascriptExecutor executor = (JavascriptExecutor)driver; 
-	     executor.executeScript("arguments[0].click();", element);
-	  
 		Thread.sleep(9000);
 		
 		driver.manage().deleteAllCookies();
