@@ -16,6 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -62,7 +63,12 @@ public class LoginToAppmaker {
 		
 		driver = new ChromeDriver(options);
 		System.out.println("Browser launched");
-		driver.manage().window().maximize();
+		
+		Dimension d = new Dimension(1382,744); 
+		//Resize the current window to the given dimension
+		driver.manage().window().setSize(d); 
+		
+		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
