@@ -23,7 +23,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -101,7 +103,7 @@ public class LoginToAppmaker {
 		} else {
 			System.out.println("Test Case Failed = " + actual_msg);
 		}
-
+ 
 		Thread.sleep(9000);
 
 		
@@ -121,11 +123,12 @@ public class LoginToAppmaker {
 		//driver.findElement(By.name("Create_New_App")).click();
 		//System.out.println("Select a app button clicked");
 		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 		WebElement element = driver.findElement(By.name("Create_New_App"));
 	    element.click();
-		
-		
-		
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  
 		Thread.sleep(9000);
 		
 		driver.manage().deleteAllCookies();
