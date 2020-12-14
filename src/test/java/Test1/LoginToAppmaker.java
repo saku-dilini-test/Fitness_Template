@@ -56,8 +56,8 @@ public class LoginToAppmaker {
 		options.addArguments("--window-size=1400,600");
 		options.addArguments("--disable-gpu");
 		options.addArguments("--no-sandbox");
-		options.addArguments("start-maximized");
-		options.addArguments("enable-automation");
+		options.addArguments("--start-maximized");
+		options.addArguments("--enable-automation");
 		options.addArguments("--disable-infobars");
 		options.addArguments("--disable-dev-shm-usage");
 		
