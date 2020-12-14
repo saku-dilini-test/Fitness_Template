@@ -115,10 +115,13 @@ public class LoginToAppmaker {
 	
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
+		
+		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.name("Create_New_App")));
+		element.click();
 
-		  WebElement element = driver.findElement(By.name("Create_New_App"));
-		  JavascriptExecutor executor = (JavascriptExecutor)driver; 
-		  executor.executeScript("arguments[0].click();", element);
+		//  WebElement element = driver.findElement(By.name("Create_New_App"));
+		 // JavascriptExecutor executor = (JavascriptExecutor)driver; 
+		//  executor.executeScript("arguments[0].click();", element);
 
 		//driver.findElement(By.name("Create_New_App")).click();
 		//System.out.println("Select a app button clicked");
