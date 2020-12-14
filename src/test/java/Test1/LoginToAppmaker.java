@@ -53,7 +53,7 @@ public class LoginToAppmaker {
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
-		options.addArguments("window-size=1400,1500");
+		options.addArguments("window-size=1980,1080");
 		options.addArguments("--disable-gpu");
 		options.addArguments("--no-sandbox");
 		options.addArguments("start-maximized");
@@ -62,11 +62,8 @@ public class LoginToAppmaker {
 		options.addArguments("--disable-dev-shm-usage");
 		
 		driver = new ChromeDriver(options);
-		System.out.println("Browser launched");
 		
-		Dimension d = new Dimension(1382,744); 
-		//Resize the current window to the given dimension
-		driver.manage().window().setSize(d); 
+		System.out.println("Browser launched"); 
 		
 		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
