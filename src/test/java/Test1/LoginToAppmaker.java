@@ -207,7 +207,7 @@ public class LoginToAppmaker {
 		String copiedText = driver.findElement(By.name("appName")).getAttribute("value").toString();
 		Thread.sleep(1000);
 
-		File objFile = new File("C:\\Appmaker Automation\\Article smoke Testing Process\\ExcelWriteReadFile\\AppnameReadWrite.csv");
+		File objFile = new File("/home/Images/comic/AppnameReadWrite.csv");
 		FileInputStream objInstream = new FileInputStream(objFile);
 		FileOutputStream fos = null;
 		XSSFWorkbook objWorkbk1 = new XSSFWorkbook(objInstream);// Workbook create
@@ -235,7 +235,7 @@ public class LoginToAppmaker {
 
 		cell.setCellValue(copiedText); // App name saved to excel sheet
 
-		fos = new FileOutputStream("C:\\Appmaker Automation\\Article smoke Testing Process\\ExcelWriteReadFile\\AppnameReadWrite.csv");
+		fos = new FileOutputStream("/home/Images/comic/AppnameReadWrite.csv");
 		objWorkbk1.write(fos);
 
 		fos.close();
@@ -331,7 +331,7 @@ public class LoginToAppmaker {
 
 //Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
-		StringSelection stringselecton1 = new StringSelection("C:\\Appmaker Automation\\Images\\5mb image.jpg");
+		StringSelection stringselecton1 = new StringSelection("/home/Images/comic/5mbimage.jpg");
 
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
 		robot.setAutoDelay(1000);
@@ -374,7 +374,7 @@ public class LoginToAppmaker {
 		js11.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
-		StringSelection stringselecton = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 12.png");
+		StringSelection stringselecton = new StringSelection("/home/Images/comic/Comic12.png");
 
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton, null);
 		robot.setAutoDelay(1000);
@@ -471,7 +471,7 @@ public class LoginToAppmaker {
 		js101.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
-		StringSelection stringselecton0 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Astro Images\\1.jpg");
+		StringSelection stringselecton0 = new StringSelection("/home/Images/comic/Comic10.jpg");
 
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton0, null);
 		robot.setAutoDelay(1000);
