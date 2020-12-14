@@ -60,6 +60,10 @@ public class LoginToAppmaker {
 		options.addArguments("--enable-automation");
 		options.addArguments("--disable-infobars");
 		options.addArguments("--disable-dev-shm-usage");
+		options.addArguments("--ignore-certificate-errors");
+		options.addArguments("--disable-extensions");
+		options.addArguments("--proxy-server='direct://'");
+		options.addArguments("--proxy-bypass-list=*");
 		
 		driver = new ChromeDriver(options);
 		
