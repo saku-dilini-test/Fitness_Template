@@ -207,7 +207,7 @@ public class LoginToAppmaker {
 		String copiedText = driver.findElement(By.name("appName")).getAttribute("value").toString();
 		Thread.sleep(1000);
 
-		File objFile = new File("/home/Images/comic/AppnameReadWrite.csv");
+		File objFile = new File("/home/Images/comic/AppnameReadWrite.xlsx");
 		FileInputStream objInstream = new FileInputStream(objFile);
 		FileOutputStream fos = null;
 		XSSFWorkbook objWorkbk1 = new XSSFWorkbook(objInstream);// Workbook create
@@ -235,7 +235,7 @@ public class LoginToAppmaker {
 
 		cell.setCellValue(copiedText); // App name saved to excel sheet
 
-		fos = new FileOutputStream("/home/Images/comic/AppnameReadWrite.csv");
+		fos = new FileOutputStream("/home/Images/comic/AppnameReadWrite.xlsx");
 		objWorkbk1.write(fos);
 
 		fos.close();
