@@ -118,8 +118,14 @@ public class LoginToAppmaker {
 
 		
 
-		driver.findElement(By.name("Create_New_App")).click();
-		System.out.println("Select a app button clicked");
+		//driver.findElement(By.name("Create_New_App")).click();
+		//System.out.println("Select a app button clicked");
+		
+		WebElement element = driver.findElement(By.name("Create_New_App"));
+	    element.click();
+		
+		
+		
 		Thread.sleep(9000);
 		
 		driver.manage().deleteAllCookies();
@@ -258,9 +264,9 @@ public class LoginToAppmaker {
 		//Thread.sleep(2000);
 		//driver.findElement(By.name("yes_btn")).click();
 		
-		WebElement element = driver.findElement(By.name("yes_btn"));
+		WebElement element1 = driver.findElement(By.name("yes_btn"));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", element); 
+		executor.executeScript("arguments[0].click();", element1); 
 		
 		System.out.println("Deleting demo data yes button clicked");
 		Thread.sleep(2000);
