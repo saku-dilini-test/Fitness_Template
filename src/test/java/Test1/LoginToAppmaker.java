@@ -88,14 +88,13 @@ public class LoginToAppmaker {
 
 		driver.findElement(By.name("submitbtn")).click();
 		System.out.println("Login button clicked = Passed");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
 		//driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
 		//System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
 		//Thread.sleep(2000);
 
-		String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]"))
-				.getAttribute("innerHTML");
+		String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect = "Login Successful";
 
 		if (actual_msg.contains(expect)) {
@@ -104,7 +103,7 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = " + actual_msg);
 		}
  
-		Thread.sleep(9000);
+		Thread.sleep(6000);
 
 		
 	}
@@ -124,10 +123,10 @@ public class LoginToAppmaker {
 		//System.out.println("Select a app button clicked");
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		WebElement element = driver.findElement(By.name("Create_New_App"));
-	    element.click();
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   
+	    WebElement element = driver.findElement(By.name("Create_New_App"));
+	    JavascriptExecutor executor = (JavascriptExecutor)driver; 
+	     executor.executeScript("arguments[0].click();", element);
 	  
 		Thread.sleep(9000);
 		
@@ -268,8 +267,8 @@ public class LoginToAppmaker {
 		//driver.findElement(By.name("yes_btn")).click();
 		
 		WebElement element1 = driver.findElement(By.name("yes_btn"));
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
-		executor.executeScript("arguments[0].click();", element1); 
+		JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+		executor1.executeScript("arguments[0].click();", element1); 
 		
 		System.out.println("Deleting demo data yes button clicked");
 		Thread.sleep(2000);
