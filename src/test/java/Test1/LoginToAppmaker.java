@@ -111,6 +111,8 @@ public class LoginToAppmaker {
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
+	/* ------commited ----------------------
+	
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
 
@@ -133,6 +135,9 @@ public class LoginToAppmaker {
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		Thread.sleep(4000);*/
 
+	/*-----uncomit here ----- 
+	
+	
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
 		a.get(0).click();
 		
