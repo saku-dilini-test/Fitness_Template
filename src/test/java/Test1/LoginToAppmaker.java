@@ -90,7 +90,7 @@ public class LoginToAppmaker {
 		System.out.println("Login button clicked = Passed");
 		Thread.sleep(3000);
 
-		String actual_msg = driver.findElement(By.cssSelector(".toast > div")).getAttribute("innerHTML");
+		String actual_msg = driver.findElement(By.cssSelector(".toast-message")).getAttribute("innerHTML");
 		String expect = "Login Successful";
 
 		if (actual_msg.contains(expect)) {
