@@ -89,10 +89,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("submitbtn")).click();
 		System.out.println("Login button clicked = Passed");
 		Thread.sleep(3000);
-		
-		//driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-		//System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
-		//Thread.sleep(2000);
 
 		String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect = "Login Successful";
