@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
+//import java.ut il.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -151,15 +151,15 @@ public class LoginToAppmaker {
 		
 //Check app naming window validation -----------------------------------------------------------------------------------------------------------
 		
-		driver.findElement(By.name("appName")).sendKeys("Astro 123");
+		driver.findElement(By.name("appName")).sendKeys("AStro12313267487853");
 		System.out.println("App name entered");
 		Thread.sleep(5000);
 		
-		driver.findElement(By.name("GetStarted_Btn")).click();
+		driver.findElement(By.name("Get Started_Btn")).click();
 		System.out.println("Get Started button clicked");
 		Thread.sleep(2000);
 		
-		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+		/*String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect21 = "App name already exists!";
 
 		if (actual_msg21.contains(expect21)) {
@@ -250,7 +250,7 @@ public class LoginToAppmaker {
 
 		driver.findElement(By.name("GetStarted_Btn")).click();
 		System.out.println("Get Started button clicked");
-		Thread.sleep(7000);
+		Thread.sleep(7000);*/
 
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
