@@ -102,7 +102,7 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = " + actual_msg);
 		}
 
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 
 		
 	}
