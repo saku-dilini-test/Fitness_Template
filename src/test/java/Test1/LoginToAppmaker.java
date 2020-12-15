@@ -120,6 +120,10 @@ public class LoginToAppmaker {
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
 		
+		WebElement element11 = driver.findElement(By.name("Create_New_App"));
+	    String text = element11.getText();
+	    System.out.println("Text =  " + text);
+		
 		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.name("Create_New_App")));
 		element.click();
 
