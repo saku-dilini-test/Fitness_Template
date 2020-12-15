@@ -161,6 +161,7 @@ public class LoginToAppmaker {
 	
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
 		a.get(0).click();
+		System.out.println("Astro Template selected ");
 		
 		//System.out.println(driver.findElement(By.cssSelector(".auto-btn-select-Zodiac")));
 		
@@ -176,7 +177,7 @@ public class LoginToAppmaker {
 		System.out.println("App name entered");
 		Thread.sleep(5000);
 		
-		driver.findElement(By.name("Get Started_Btn")).click();
+		driver.findElement(By.name("GetStarted_Btn")).click();
 		System.out.println("Get Started button clicked");
 		Thread.sleep(2000);
 		
