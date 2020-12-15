@@ -32,7 +32,7 @@ import org.testng.annotations.Test;
 
 public class LoginToAppmaker {
 
-	public String baseURL ="https://appmakercms.otenro.com/app/login";
+	public String baseURL ="https://dashboard.appmaker.lk/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
 	//String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
 	//String driverPath ="/usr/bin/google-chrome";
@@ -89,13 +89,17 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("Email entered = Passed");
 
-		driver.findElement(By.name("password")).sendKeys("Saku@1234");
+		driver.findElement(By.name("password")).sendKeys("Saku@123456");
 		System.out.println("Password entered = Passed");
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("submitbtn")).click();
 		System.out.println("Login button clicked = Passed");
 		Thread.sleep(3000);
+		
+		driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
+		System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
+		Thread.sleep(2000);
 
 		String actual_msg = driver.findElement(By.cssSelector(".toast-message")).getAttribute("innerHTML");
 		String expect = "Login Successful";
@@ -120,9 +124,6 @@ public class LoginToAppmaker {
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
 		
-		WebElement element11 = driver.findElement(By.name("Create_New_App"));
-	    String text = element11.getText();
-	    System.out.println("Text =  " + text);
 		
 		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.name("Create_New_App")));
 		element.click();
