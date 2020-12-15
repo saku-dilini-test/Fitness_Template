@@ -69,6 +69,8 @@ public class LoginToAppmaker {
 		options.addArguments("--disable-extensions");
 		options.addArguments("--proxy-server='direct://'");
 		options.addArguments("--proxy-bypass-list=*");
+		options.addArguments("--Djava.awt.headless=true");
+		
 		
 		driver = new ChromeDriver(options);
 		
