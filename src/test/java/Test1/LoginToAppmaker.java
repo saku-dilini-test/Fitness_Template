@@ -55,7 +55,7 @@ public class LoginToAppmaker {
 		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 		//System.setProperty("webdriver.chrome.driver",driverPath);
 		//System.setProperty("webdriver.chrome.logfile",driverPath);
-		System.setProperty("java.awt.headless", "false");
+		//sSystem.setProperty("java.awt.headless", "false");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
