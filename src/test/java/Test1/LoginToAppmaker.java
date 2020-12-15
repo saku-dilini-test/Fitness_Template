@@ -80,6 +80,10 @@ public class LoginToAppmaker {
 		
 
 		driver.get(baseURL);
+		
+		driver.manage().deleteAllCookies();
+		System.out.println("All cookies Deleted");
+		Thread.sleep(5000);
 
 		//driver.findElement(By.name("Login_btn")).click();
 		//Thread.sleep(2000);
