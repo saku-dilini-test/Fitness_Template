@@ -3,11 +3,14 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
 //import java.ut il.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -263,9 +266,65 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		
 
-		
-
 	}
+	
+	
+	
+	@Test(priority = 4 ) // (priority=10)
+	public void Login_Super_Admin_For_SubmitForConfig() throws Exception {
+		
+		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
+		Thread.sleep(4000);
+		
+		 ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+		 driver.switchTo().window(tabs.get(0)); //switches to new tab
+		 driver.get("https://appmakercms.otenro.com/app/login");
+			
+			driver.findElement(By.name("email")).sendKeys("su@simatosolutions.com");
+			Thread.sleep(2000);
+			System.out.println("Email entered = Passed");
+
+			driver.findElement(By.name("password")).sendKeys("#Appmaker123");
+			System.out.println("Password entered = Passed");
+			Thread.sleep(2000);
+
+			driver.findElement(By.name("submitbtn")).click();
+			System.out.println("Login button clicked = Passed");
+			Thread.sleep(7000);
+			
+			driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
+			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
+			Thread.sleep(2000);
+
+			File file1 = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+			FileReader fr = new FileReader(file1);
+			BufferedReader reader = new BufferedReader(fr);
+
+			String str = reader.readLine();
+
+			driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(str);
+			Thread.sleep(3000);
+			
+			reader.close();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	/*------uncomit here -------------
 
