@@ -267,68 +267,6 @@ public class LoginToAppmaker {
 		
 
 	}
-	
-	
-	
-	@Test(priority = 4 ) // (priority=10)
-	public void Login_Super_Admin_For_SubmitForConfig() throws Exception {
-		
-		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
-		Thread.sleep(4000);
-		
-		 ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-		 driver.switchTo().window(tabs.get(0)); //switches to new tab
-		 driver.get("https://appmakercms.otenro.com/app/login");
-			
-			driver.findElement(By.name("email")).sendKeys("su@simatosolutions.com");
-			Thread.sleep(2000);
-			System.out.println("Email entered = Passed");
-
-			driver.findElement(By.name("password")).sendKeys("#Appmaker123");
-			System.out.println("Password entered = Passed");
-			Thread.sleep(2000);
-
-			driver.findElement(By.name("submitbtn")).click();
-			System.out.println("Login button clicked = Passed");
-			Thread.sleep(7000);
-			
-			driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
-			Thread.sleep(2000);
-
-			File file1 = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
-			FileReader fr = new FileReader(file1);
-			BufferedReader reader = new BufferedReader(fr);
-
-			String str = reader.readLine();
-
-			driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(str);
-			Thread.sleep(3000);
-			
-			System.out.println("app name = " +str);
-			
-			reader.close();
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*------uncomit here -------------
 
 	// Create new Category
 	//------------------------------------------------------------------***************************************************-----------------------
@@ -3331,17 +3269,16 @@ public class LoginToAppmaker {
 		System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
 		Thread.sleep(2000);
 
-		File objFile = new File("C:\\Appmaker Automation\\Article smoke Testing Process\\ExcelWriteReadFile\\AppnameReadWrite.xlsx");
-		FileInputStream objInstream = new FileInputStream(objFile);
-		XSSFWorkbook objWorkbk1 = new XSSFWorkbook(objInstream);// Workbook create
-		XSSFSheet sheet = objWorkbk1.getSheet("AppNames");
+		File file1 = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+		FileReader fr = new FileReader(file1);
+		BufferedReader reader = new BufferedReader(fr);
 
+		String str = reader.readLine();
+
+		driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(str);
 		Thread.sleep(3000);
-
-		String Appname = sheet.getRow(1).getCell(0).getStringCellValue();
-
-		driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(Appname);
-		Thread.sleep(3000);
+			
+		System.out.println("app name = " +str);
 
 		driver.findElement(By.className("automation-home-btn-manage")).click();
 		System.out.println("----Manage_btn button clicked---->>");
@@ -3506,17 +3443,16 @@ public class LoginToAppmaker {
 			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
 			Thread.sleep(2000);
 
-			File objFile = new File("C:\\Appmaker Automation\\Article smoke Testing Process\\ExcelWriteReadFile\\AppnameReadWrite.xlsx");
-			FileInputStream objInstream = new FileInputStream(objFile);
-			XSSFWorkbook objWorkbk1 = new XSSFWorkbook(objInstream);// Workbook create
-			XSSFSheet sheet = objWorkbk1.getSheet("AppNames");
+			File file1 = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+			FileReader fr = new FileReader(file1);
+			BufferedReader reader = new BufferedReader(fr);
 
-			Thread.sleep(2000);
+			String str = reader.readLine();
 
-			String Appname = sheet.getRow(1).getCell(0).getStringCellValue();
-
-			driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(Appname);
+			driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(str);
 			Thread.sleep(3000);
+			
+			System.out.println("app name = " +str);
 
 			driver.findElement(By.className("automation-home-btn-manage")).click();
 			System.out.println("----Manage_btn button clicked---->>");
