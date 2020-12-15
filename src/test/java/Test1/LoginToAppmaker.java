@@ -3,9 +3,11 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 //import java.ut il.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -127,17 +129,9 @@ public class LoginToAppmaker {
 	
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
-		
-		
-		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.name("Create_New_App")));
-		element.click();
 
-		//  WebElement element = driver.findElement(By.name("Create_New_App"));
-		 // JavascriptExecutor executor = (JavascriptExecutor)driver; 
-		//  executor.executeScript("arguments[0].click();", element);
-
-		//driver.findElement(By.name("Create_New_App")).click();
-		//System.out.println("Select a app button clicked");
+		driver.findElement(By.name("Create_New_App")).click();
+		System.out.println("Select a app button clicked");
 		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   
@@ -155,25 +149,16 @@ public class LoginToAppmaker {
 		WebElement Element = driver.findElement(By.cssSelector("#tab-content-0 > div > div:nth-child(7) > div > div.col-md-5.text-left > div.padding-top.margin-top"));
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		Thread.sleep(4000);*/
-
-	
-	
 	
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
 		a.get(0).click();
 		System.out.println("Astro Template selected ");
-		
-		//System.out.println(driver.findElement(By.cssSelector(".auto-btn-select-Zodiac")));
-		
-		//driver.findElement(By.cssSelector(".auto-btn-select-Zodiac")).click();
 		Thread.sleep(4000);
-		
-		//System.out.println(driver.findElement(By.cssSelector(".auto-btn-select-Zodiac")));
 		
 		
 //Check app naming window validation -----------------------------------------------------------------------------------------------------------
 		
-		driver.findElement(By.name("appName")).sendKeys("AStro12313267487853");
+		driver.findElement(By.name("appName")).sendKeys("Astro 123");
 		System.out.println("App name entered");
 		Thread.sleep(5000);
 		
@@ -181,7 +166,7 @@ public class LoginToAppmaker {
 		System.out.println("Get Started button clicked");
 		Thread.sleep(2000);
 		
-		/*String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect21 = "App name already exists!";
 
 		if (actual_msg21.contains(expect21)) {
@@ -234,45 +219,17 @@ public class LoginToAppmaker {
 		String copiedText = driver.findElement(By.name("appName")).getAttribute("value").toString();
 		Thread.sleep(1000);
 
-		File objFile = new File("/home/Images/comic/AppnameReadWrite.xlsx");
-		FileInputStream objInstream = new FileInputStream(objFile);
-		FileOutputStream fos = null;
-		XSSFWorkbook objWorkbk1 = new XSSFWorkbook(objInstream);// Workbook create
-		XSSFSheet sheet = objWorkbk1.getSheet("AppNames");
-		XSSFRow row = null;
-		XSSFCell cell = null;
-		int colNum = -1; // work sheet create object and get specific sheet
-
-		row = sheet.getRow(0);
-
-		for (int i = 0; i < row.getLastCellNum(); i++) {
-			if (row.getCell(i).getStringCellValue().trim().equals("App Name"))
-				;
-			{
-				colNum = i;
-			}
-		}
-		row = sheet.getRow(1);
-		if (row == null)
-			row = sheet.createRow(1);
-
-		cell = row.getCell(colNum);
-		if (cell == null)
-			cell = row.createCell(colNum);
-
-		cell.setCellValue(copiedText); // App name saved to excel sheet
-
-		fos = new FileOutputStream("/home/Images/comic/AppnameReadWrite.xlsx");
-		objWorkbk1.write(fos);
-
-		fos.close();
-		objWorkbk1.close();
+		File file = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+		FileWriter fw = new FileWriter(file);
+		BufferedWriter writer = new BufferedWriter(fw);
+		writer.write(copiedText);
+		writer.close();
 
 		Thread.sleep(10000);
 
 		driver.findElement(By.name("GetStarted_Btn")).click();
 		System.out.println("Get Started button clicked");
-		Thread.sleep(7000);*/
+		Thread.sleep(7000);
 
 		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
