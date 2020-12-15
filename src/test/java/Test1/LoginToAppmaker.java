@@ -302,10 +302,10 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.name("browse_img"));
-		js.executeScript("arguments[0].scrollIntoView();", Element);
-		Thread.sleep(2000);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//WebElement Element = driver.findElement(By.name("browse_img"));
+		//js.executeScript("arguments[0].scrollIntoView();", Element);
+		//Thread.sleep(2000);
 // Below code for uploading image
 
 		Robot robot = new Robot();
