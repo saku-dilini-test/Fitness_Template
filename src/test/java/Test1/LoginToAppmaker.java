@@ -32,7 +32,7 @@ import org.testng.annotations.Test;
 
 public class LoginToAppmaker {
 
-	public String baseURL ="https://dashboard.appmaker.lk/app/login";
+	public String baseURL ="https://appmakercms.otenro.com/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
 	//String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
 	//String driverPath ="/usr/bin/google-chrome";
@@ -89,7 +89,7 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("Email entered = Passed");
 
-		driver.findElement(By.name("password")).sendKeys("Saku@123456");
+		driver.findElement(By.name("password")).sendKeys("Saku@1234");
 		System.out.println("Password entered = Passed");
 		Thread.sleep(2000);
 
