@@ -305,6 +305,8 @@ public class LoginToAppmaker {
 			driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(str);
 			Thread.sleep(3000);
 			
+			System.out.println("app name = " +str);
+			
 			reader.close();
 	}
 	
