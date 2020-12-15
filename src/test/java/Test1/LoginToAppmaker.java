@@ -55,6 +55,7 @@ public class LoginToAppmaker {
 		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 		//System.setProperty("webdriver.chrome.driver",driverPath);
 		//System.setProperty("webdriver.chrome.logfile",driverPath);
+		System.setProperty("java.awt.headless", "false");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
@@ -72,11 +73,12 @@ public class LoginToAppmaker {
 		options.addArguments("--Djava.awt.headless=true");
 		
 		
+		
 		driver = new ChromeDriver(options);
 		
 		System.out.println("Browser launched"); 
 		
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
