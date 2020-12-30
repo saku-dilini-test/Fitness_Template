@@ -70,13 +70,13 @@ public class LoginToAppmaker {
 		options.addArguments("--disable-extensions");
 		options.addArguments("--proxy-server='direct://'");
 		options.addArguments("--proxy-bypass-list=*");
-		options.addArguments("--Djava.awt.headless=false");
+		options.addArguments("--Djava.awt.headless=true");
 		
 		
 		
 		driver = new ChromeDriver(options);
 		
-		System.out.println("Browser launched"); 
+		System.out.println("Browser launched");
 		
 		driver.manage().window().maximize(); 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
