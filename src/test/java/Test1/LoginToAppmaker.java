@@ -320,7 +320,8 @@ public class LoginToAppmaker {
 
 //Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
-		StringSelection stringselecton1 = new StringSelection("/home/Images/comic/5mbimage.jpg");
+		//StringSelection stringselecton1 = new StringSelection("/home/Images/comic/5mbimage.jpg");
+		StringSelection stringselecton1 = new StringSelection("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\Images\\5mbimage.jpg");
 
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
 		robot.setAutoDelay(1000);
