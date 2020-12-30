@@ -314,7 +314,7 @@ public class LoginToAppmaker {
 
 		Robot robot = new Robot();
 		
-		JavascriptExecutor js1 = (JavascriptExecutor) driver;
+	/*	JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
@@ -357,7 +357,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("paid")).click();
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
-
+*/
 // Uploading correct image size image and saving -------------------------------------------------------------------------------
 		
 		JavascriptExecutor js11 = (JavascriptExecutor) driver;
@@ -431,6 +431,8 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = " + actual_msg2);
 		}
 		Thread.sleep(7000);
+		
+		/*
 		
 // Add another category to capture category name validation --------------------------------------------------------------------------------------
 		
@@ -557,7 +559,7 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = " + actual_msg240);
 		}
 	
-		
+	*/	
 	}
 	
 	//-----------------------------------------------------------**************************************************--------------------------------
