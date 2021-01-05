@@ -360,14 +360,12 @@ public class LoginToAppmaker {
 */
 // Uploading correct image size image and saving -------------------------------------------------------------------------------
 		
-		JavascriptExecutor js11 = (JavascriptExecutor) driver;
-		js11.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
-		robot.setAutoDelay(1000);
-
-		StringSelection stringselecton = new StringSelection("/home/Images/comic/Comic12.png");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton, null);
-		robot.setAutoDelay(1000);
+		//JavascriptExecutor js11 = (JavascriptExecutor) driver;
+		//js11.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
+		//robot.setAutoDelay(1000);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.png");
+		
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
@@ -393,7 +391,7 @@ public class LoginToAppmaker {
 			WebElement element = driver.findElement(By.cssSelector(".upper-canvas"));
 			Actions builder = new Actions(driver);
 			builder.moveToElement(element).perform();
-
+  
 		}
 		{
 			WebElement element = driver.findElement(By.cssSelector(".upper-canvas"));
