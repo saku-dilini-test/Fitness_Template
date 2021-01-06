@@ -278,6 +278,7 @@ public class LoginToAppmaker {
 	@Test(priority = 4 ) // (priority=4)
 	public void AddNewCategory() throws Exception {
 	
+		System.out.println("--------------------------Starting to add new category-------------------------------->>");
 
 		driver.findElement(By.name("Pages")).click();
 		System.out.println("----Pages button clicked---->>");
@@ -421,8 +422,10 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(7000);
 		
-		
-		
+		System.out.println("--------------------------New category Added-------------------------------->>");
+	
+		System.out.println("--------------------------Adding another category to capture category name validation-------------------------------->>");
+
 // Add another category to capture category name validation --------------------------------------------------------------------------------------
 		
 		driver.findElement(By.name("add_new_category")).click();
@@ -546,8 +549,9 @@ public class LoginToAppmaker {
 		} else {
 			System.out.println("Test Case Failed = " + actual_msg240);
 		}
-	
-	
+		
+		System.out.println("-------------------------- Category name validation done-------------------------------->>");
+
 	}
 	
 	//-----------------------------------------------------------**************************************************--------------------------------
@@ -555,6 +559,9 @@ public class LoginToAppmaker {
  
 	@Test(priority = 5 ) // (priority=4)
 	public void Edit_Category() throws Exception {
+		
+		System.out.println("--------------------------Editing category-------------------------------->>");
+
 		
 		driver.findElement(By.name("edit_btn")).click();
 		System.out.println("----Category edit clicked---->>");
@@ -653,12 +660,16 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(5000);
 		
+		System.out.println("--------------------------Category edit done-------------------------------->>");
+
 	}
 //-----------------------------------------------------------Category order change and check---------------------------------------------------------
-/*	
+	
 	@Test(priority = 6 ) // (priority=4)
 	public void Category_Order() throws Exception {
 		
+		System.out.println("--------------------------Category Ordering-------------------------------->>");
+
 		driver.findElement(By.className("automation-manage-cat-down-active")).click();
 		System.out.println("----category order chaning arrow clicked---->>");
 		Thread.sleep(6000);
@@ -672,12 +683,16 @@ public class LoginToAppmaker {
 		b.get(2).click(); // can change inside page inner pages
 		System.out.println("----Categories button clicked---->>");
 		Thread.sleep(5000);
+		
+		System.out.println("--------------------------Category Ordering done-------------------------------->>");
 	}
 	
 	//----------------------------------------------------******************************************************************************************
 	
 	@Test(priority = 7 ) // (priority=4)
 	public void Delete_Category() throws Exception {
+		
+		System.out.println("--------------------------Delete Category-------------------------------->>");
 		
 		List<WebElement> b = driver.findElements(By.name("delete_btn"));
 		Thread.sleep(1000);
@@ -689,10 +704,12 @@ public class LoginToAppmaker {
 		System.out.println("----Yes button cliked---->>");
 		Thread.sleep(4000);
 		
+		System.out.println("--------------------------Delete Category done-------------------------------->>");
+		
 	}
 	
 	//--------------------------------------------------------------*****************************************************-------------------------
-
+/*
 	@Test(priority = 8 ) // (priority=4)
 	public void AddSubCategory() throws Exception {
 		
