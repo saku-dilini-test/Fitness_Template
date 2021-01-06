@@ -305,25 +305,18 @@ public class LoginToAppmaker {
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
 		
-
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		//WebElement Element = driver.findElement(By.name("browse_img"));
-		//js.executeScript("arguments[0].scrollIntoView();", Element);
-		//Thread.sleep(2000);
 // Below code for uploading image
 
 		Robot robot = new Robot();
 		
-	/*	JavascriptExecutor js1 = (JavascriptExecutor) driver;
+		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
 //Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
-		//StringSelection stringselecton1 = new StringSelection("/home/Images/comic/5mbimage.jpg");
-		StringSelection stringselecton1 = new StringSelection("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\Images\\5mbimage.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
+		
 		robot.setAutoDelay(1000);
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -357,7 +350,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("paid")).click();
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
-*/
+
 // Uploading correct image size image and saving -------------------------------------------------------------------------------
 		
 		JavascriptExecutor js11 = (JavascriptExecutor) driver;
