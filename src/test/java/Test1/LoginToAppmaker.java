@@ -704,15 +704,26 @@ public class LoginToAppmaker {
 		System.out.println("----Yes button cliked---->>");
 		Thread.sleep(4000);
 		
+		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+		String expect21 = "Category Deleted Successful";
+
+		if (actual_msg21.contains(expect21)) {
+			System.out.println("Validation passed = " + actual_msg21);
+		} else {
+			System.out.println("Test Case Failed = " + actual_msg21);
+		}
+		
 		System.out.println("--------------------------Delete Category done-------------------------------->>");
 		
 	}
 	
 	//--------------------------------------------------------------*****************************************************-------------------------
-/*
+
 	@Test(priority = 8 ) // (priority=4)
 	public void AddSubCategory() throws Exception {
 		
+		System.out.println("--------------------------Adding Sub Category-------------------------------->>");
+
 
 		List<WebElement> b = driver.findElements(By.name("sub_cate_add_btn"));
 		Thread.sleep(1000);
@@ -727,7 +738,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("free")).click();
 		System.out.println("----Free app radio button clicked---->>");
 		Thread.sleep(2000);
-
+/*
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement Element = driver.findElement(By.name("browse_img"));
 		js.executeScript("arguments[0].scrollIntoView();", Element);
@@ -779,17 +790,16 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("paid")).click();
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
-
+*/
 // Uploading correct image and saving --------------------------------------------------------------------------------------------------------------------------------------
 		
 		JavascriptExecutor js10 = (JavascriptExecutor) driver;
 		js10.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
-		robot.setAutoDelay(1000);
+		Robot robot = new Robot();
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic19.jpg");
 
-		StringSelection stringselecton = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 19.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton, null);
 		robot.setAutoDelay(1000);
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -854,7 +864,12 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(5000);
 		
+		System.out.println("--------------------------Adding Sub Category done-------------------------------->>");
+
+		
 // Add another sub category with same name and get the validation message ------------------------------------------------------------------------
+		
+		System.out.println("--------------------------Adding another Sub Category to validate category name-------------------------------->>");
 		
 		List<WebElement> bb = driver.findElements(By.name("sub_cate_add_btn"));
 		Thread.sleep(1000);
@@ -880,12 +895,9 @@ public class LoginToAppmaker {
 		js12.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
 		robot.setAutoDelay(1000);
-
-		StringSelection stringselecton11 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 19.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton11, null);
-		robot.setAutoDelay(1000);
-
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.jpg");
+		
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 
@@ -978,6 +990,7 @@ public class LoginToAppmaker {
 		}
 		
 		
+		System.out.println("------------------------- category name Validated-------------------------------->>");
 
 
 	}
@@ -989,6 +1002,8 @@ public class LoginToAppmaker {
 	@Test(priority = 9 ) // (priority=4)
 	public void EditSubCategory() throws Exception {
 		
+		System.out.println("-------------------------Edit category -------------------------------->>");
+
 		List<WebElement> b = driver.findElements(By.name("edit_btn"));
 		Thread.sleep(1000);
 		b.get(1).click();
@@ -1020,11 +1035,9 @@ public class LoginToAppmaker {
 		js12.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
 		robot.setAutoDelay(1000);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
 
-		StringSelection stringselecton11 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 19.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton11, null);
-		robot.setAutoDelay(1000);
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
@@ -1088,12 +1101,15 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(5000);
 		
-		
+		System.out.println("-------------------------Edit category Done-------------------------------->>");
+
 	}
 //-----------------------------------------------------------------------------------***************************************************************
 	
 	@Test(priority = 10 ) // (priority=4)
 	public void DeleteSubCategory() throws Exception {
+		
+		System.out.println("-------------------------Delete category -------------------------------->>");
 		
 		List<WebElement> b = driver.findElements(By.name("delete_btn"));
 		Thread.sleep(1000);
@@ -1105,11 +1121,22 @@ public class LoginToAppmaker {
 		System.out.println("---- delete yes button clicked---->>");
 		Thread.sleep(5000);
 		
+		String actual_msg221 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+		String expect221 = "category deleted successfully!";
+
+		if (actual_msg221.contains(expect221)) {
+			System.out.println("Validation passed = " + actual_msg221);
+		} else {
+			System.out.println("Test Case Failed = " + actual_msg221);
+		}
+		
 		driver.findElement(By.name("close_btn")).click();
 		Thread.sleep(2000);
 		
+		System.out.println("-------------------------Delete category Done -------------------------------->>");
+
 	}
-	
+/*	
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
 
