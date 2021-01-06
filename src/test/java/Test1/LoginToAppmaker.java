@@ -315,7 +315,7 @@ public class LoginToAppmaker {
 
 //Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
+		driver.findElement(By.id("fileInput")).sendKeys("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\Images\\5mbimage.jpg");
 		
 		robot.setAutoDelay(1000);
 
