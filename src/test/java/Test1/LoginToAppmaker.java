@@ -309,7 +309,7 @@ public class LoginToAppmaker {
 // Below code for uploading image
 
 		Robot robot = new Robot();
-/*		
+		
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
@@ -317,6 +317,10 @@ public class LoginToAppmaker {
 //Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
+		
+		
+		robot.setAutoDelay(100);
+		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
@@ -332,7 +336,7 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(1000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 		
-		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+		//String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect21 = "Image should be less than 5MB";
 
 		if (actual_msg21.contains(expect21)) {
@@ -349,7 +353,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("paid")).click();
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
-*/
+
 // Uploading correct image size image and saving -------------------------------------------------------------------------------
 		
 		JavascriptExecutor js11 = (JavascriptExecutor) driver;
@@ -896,7 +900,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(1000);
 		
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.jpg");
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.png");
 		
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
