@@ -360,9 +360,9 @@ public class LoginToAppmaker {
 */
 // Uploading correct image size image and saving -------------------------------------------------------------------------------
 		
-		//JavascriptExecutor js11 = (JavascriptExecutor) driver;
-		//js11.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
-		//robot.setAutoDelay(1000);
+		JavascriptExecutor js11 = (JavascriptExecutor) driver;
+		js11.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
+		robot.setAutoDelay(1000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.png");
 		
