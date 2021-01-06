@@ -330,7 +330,7 @@ public class LoginToAppmaker {
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
-		robot.setAutoDelay(2000);
+		robot.setAutoDelay(1000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 		
 		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
