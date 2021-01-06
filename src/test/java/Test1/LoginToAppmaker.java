@@ -308,16 +308,14 @@ public class LoginToAppmaker {
 // Below code for uploading image
 
 		Robot robot = new Robot();
-		
+/*		
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
 //Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
-		driver.findElement(By.id("fileInput")).sendKeys("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\Images\\5mbimage.jpg");
-		
-		robot.setAutoDelay(1000);
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
@@ -350,7 +348,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("paid")).click();
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
-
+*/
 // Uploading correct image size image and saving -------------------------------------------------------------------------------
 		
 		JavascriptExecutor js11 = (JavascriptExecutor) driver;
@@ -423,7 +421,7 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(7000);
 		
-		/*
+		
 		
 // Add another category to capture category name validation --------------------------------------------------------------------------------------
 		
@@ -453,10 +451,9 @@ public class LoginToAppmaker {
 		JavascriptExecutor js101 = (JavascriptExecutor) driver;
 		js101.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
 
-		StringSelection stringselecton0 = new StringSelection("/home/Images/comic/Comic10.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton0, null);
 		robot.setAutoDelay(1000);
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -550,7 +547,7 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = " + actual_msg240);
 		}
 	
-	*/	
+	
 	}
 	
 	//-----------------------------------------------------------**************************************************--------------------------------
