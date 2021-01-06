@@ -551,7 +551,7 @@ public class LoginToAppmaker {
 	}
 	
 	//-----------------------------------------------------------**************************************************--------------------------------
-/*------comited from here--------
+
  
 	@Test(priority = 5 ) // (priority=4)
 	public void Edit_Category() throws Exception {
@@ -587,10 +587,7 @@ public class LoginToAppmaker {
 		js101.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
-		StringSelection stringselecton0 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Astro Images\\1.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton0, null);
-		robot.setAutoDelay(1000);
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
 
 		robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
@@ -658,7 +655,7 @@ public class LoginToAppmaker {
 		
 	}
 //-----------------------------------------------------------Category order change and check---------------------------------------------------------
-	
+/*	
 	@Test(priority = 6 ) // (priority=4)
 	public void Category_Order() throws Exception {
 		
