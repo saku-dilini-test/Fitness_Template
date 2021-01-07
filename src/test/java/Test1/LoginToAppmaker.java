@@ -1,27 +1,18 @@
 package Test1;
 import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
+
 import java.awt.event.KeyEvent;
-import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
+
 import java.io.FileWriter;
-import java.util.ArrayList;
+
 //import java.ut il.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -29,9 +20,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -318,25 +306,13 @@ public class LoginToAppmaker {
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
 		
-		
 		robot.setAutoDelay(100);
 		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-
-	/*	robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);*/
 
 		robot.setAutoDelay(1000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 		
-		//String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+		
 		String expect21 = "Image should be less than 5MB";
 
 		if (actual_msg21.contains(expect21)) {
@@ -742,7 +718,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("free")).click();
 		System.out.println("----Free app radio button clicked---->>");
 		Thread.sleep(2000);
-/*
+
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement Element = driver.findElement(By.name("browse_img"));
 		js.executeScript("arguments[0].scrollIntoView();", Element);
@@ -756,28 +732,17 @@ public class LoginToAppmaker {
 		js1.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
-//Below code is for capturing image validation part, image should be less than 5 mb---------------------------------------------------------------
+		//Below code is for capturing image validation part, image should be less than 5 mb------------------------------------------------------------
 		
-		StringSelection stringselecton1 = new StringSelection("C:\\Appmaker Automation\\Images\\5mb image.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
-		robot.setAutoDelay(2000);
-		System.out.println("----Browse Image button clicked and image uploaded---->>");
-		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
+				
+		robot.setAutoDelay(100);
 		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
+
+		robot.setAutoDelay(1000);
+		System.out.println("----Browse Image button clicked and image uploaded---->>");
+				
+				
 		String expect21 = "Image should be less than 5MB";
 
 		if (actual_msg21.contains(expect21)) {
@@ -785,6 +750,7 @@ public class LoginToAppmaker {
 		} else {
 			System.out.println("Test Case Failed = " + actual_msg21);
 		}
+		
 		Thread.sleep(7000);
 		
 		driver.findElement(By.name("free")).click();
@@ -794,13 +760,11 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("paid")).click();
 		System.out.println("----Paid app radio button clicked---->>");
 		Thread.sleep(2000);
-*/
+
 // Uploading correct image and saving --------------------------------------------------------------------------------------------------------------------------------------
 		
 		JavascriptExecutor js10 = (JavascriptExecutor) driver;
 		js10.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
-
-		Robot robot = new Robot();
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic19.jpg");
 
@@ -1126,7 +1090,7 @@ public class LoginToAppmaker {
 		Thread.sleep(5000);
 		
 		String actual_msg221 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-		String expect221 = "category deleted successfully!";
+		String expect221 = "Category Deleted Successful";
 
 		if (actual_msg221.contains(expect221)) {
 			System.out.println("Validation passed = " + actual_msg221);
