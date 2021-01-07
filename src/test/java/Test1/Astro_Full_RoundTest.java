@@ -35,7 +35,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class LoginToAppmaker {
+public class Astro_Full_RoundTest {
 
 	public String baseURL ="https://appmakercms.otenro.com/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
@@ -322,7 +322,7 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(100);
 		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
-		robot.keyPress(KeyEvent.VK_CONTROL);
+	/*	robot.keyPress(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_V);
 
 		robot.keyRelease(KeyEvent.VK_CONTROL);
@@ -331,7 +331,7 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(2000);
 
 		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);*/
 
 		robot.setAutoDelay(1000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
