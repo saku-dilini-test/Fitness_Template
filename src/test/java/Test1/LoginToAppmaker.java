@@ -109,13 +109,22 @@ public class LoginToAppmaker {
 		}
  
 		Thread.sleep(6000);
+		
+		
+		//-----------------------********************
+				List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
+				Thread.sleep(1000);
+				activeColumns.get(activeColumns.size() - 1).click();
+				Thread.sleep(4000);
+				
+		//-----------------------------*********************************
 	}
 
 	// Create new App
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
-	@Test(priority = 3 ) // (priority=3)
+	@Test(enabled = false) // (priority=3)
 	public void CreateNewApp() throws Exception {
 		
 		System.out.println("--------------------------Starting to create new app using ASTRO template-------------------------------->>");
@@ -252,7 +261,7 @@ public class LoginToAppmaker {
 	// Create new Category
 	//------------------------------------------------------------------***************************************************-----------------------
 
-	@Test(priority = 4 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void AddNewCategory() throws Exception {
 	
 		System.out.println("--------------------------Starting to add new category-------------------------------->>");
@@ -502,7 +511,7 @@ public class LoginToAppmaker {
 	//-----------------------------------------------------------**************************************************--------------------------------
 
  
-	@Test(priority = 5 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void Edit_Category() throws Exception {
 		
 		System.out.println("--------------------------Editing category-------------------------------->>");
@@ -599,7 +608,7 @@ public class LoginToAppmaker {
 	}
 //-----------------------------------------------------------Category order change and check---------------------------------------------------------
 	
-	@Test(priority = 6 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void Category_Order() throws Exception {
 		
 		System.out.println("--------------------------Category Ordering-------------------------------->>");
@@ -623,7 +632,7 @@ public class LoginToAppmaker {
 	
 	//----------------------------------------------------******************************************************************************************
 	
-	@Test(priority = 7 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void Delete_Category() throws Exception {
 		
 		System.out.println("--------------------------Delete Category-------------------------------->>");
@@ -653,7 +662,7 @@ public class LoginToAppmaker {
 	
 	//--------------------------------------------------------------*****************************************************-------------------------
 
-	@Test(priority = 8 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void AddSubCategory() throws Exception {
 		
 		System.out.println("--------------------------Adding Sub Category-------------------------------->>");
@@ -895,7 +904,7 @@ public class LoginToAppmaker {
 	
 	//------------------------------------------------------------------------********************************************************************
 	
-	@Test(priority = 9 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void EditSubCategory() throws Exception {
 		
 		System.out.println("-------------------------Editing Sub category -------------------------------->>");
@@ -990,7 +999,7 @@ public class LoginToAppmaker {
 	}
 //-----------------------------------------------------------------------------------***************************************************************
 	
-	@Test(priority = 10 ) // (priority=4)
+	@Test(enabled = false) // (priority=4)
 	public void DeleteSubCategory() throws Exception {
 		
 		System.out.println("-------------------------Deleting Sub category -------------------------------->>");
@@ -1026,6 +1035,16 @@ public class LoginToAppmaker {
 
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
+		
+		
+//-----------------*********************************************************
+		driver.findElement(By.name("Pages")).click();
+		System.out.println("Commerce button clicked");
+		Thread.sleep(4000);
+		
+//--------------------------*********************************************	
+		
+		
 		
 		System.out.println("-------------------------Adding new Page -------------------------------->>");
 
@@ -1519,17 +1538,15 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		System.out.println("----PDF checkbox clicked---->>");
 		
-		JavascriptExecutor js81 = (JavascriptExecutor) driver;
-		js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
+		//JavascriptExecutor js81 = (JavascriptExecutor) driver;
+		//js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
 		robot.setAutoDelay(2000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/6mbpdf.pdf");
-		
-		robot.setAutoDelay(100);
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
-		robot.setAutoDelay(2000);
+		robot.setAutoDelay(100);
 		System.out.println("----pdf uploaded---->>");
 
 		String expect7 = "Try Again  Maximum PDF file size allowed is 5MB !";
