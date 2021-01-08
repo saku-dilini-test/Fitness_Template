@@ -1541,8 +1541,8 @@ public class LoginToAppmaker {
 		System.out.println("----PDF checkbox clicked---->>");
 		Thread.sleep(4000);
 		
-		//JavascriptExecutor js81 = (JavascriptExecutor) driver;
-		//js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
+		JavascriptExecutor js81 = (JavascriptExecutor) driver;
+		js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
 		driver.findElement(By.cssSelector("div:nth-child(1) > .btn")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 		Thread.sleep(2000);
