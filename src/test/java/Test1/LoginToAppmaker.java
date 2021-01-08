@@ -119,6 +119,9 @@ public class LoginToAppmaker {
 				
 				System.out.println("app selected--------------------------");
 				
+				Thread.sleep(6000);
+				
+				
 		//-----------------------------*********************************
 	}
 
