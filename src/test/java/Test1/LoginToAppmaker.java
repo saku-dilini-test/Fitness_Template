@@ -1549,7 +1549,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
-		robot.setAutoDelay(100);
 		System.out.println("----pdf uploaded---->>");
 
 		String expect7 = "Try Again  Maximum PDF file size allowed is 5MB !";
