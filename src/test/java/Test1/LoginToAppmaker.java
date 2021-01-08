@@ -1541,10 +1541,10 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		System.out.println("----PDF checkbox clicked---->>");
 		
-		JavascriptExecutor js81 = (JavascriptExecutor) driver;
-		js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
+		//JavascriptExecutor js81 = (JavascriptExecutor) driver;
+		//js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
-		robot.setAutoDelay(2000);
+		//robot.setAutoDelay(2000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
