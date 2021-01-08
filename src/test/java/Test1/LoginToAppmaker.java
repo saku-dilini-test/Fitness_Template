@@ -1545,7 +1545,7 @@ public class LoginToAppmaker {
 		//js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
 		driver.findElement(By.id("fileInputPdf")).sendKeys("/home/Images/comic/6mbpdf.pdf");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
 		System.out.println("----pdf uploaded---->>");
