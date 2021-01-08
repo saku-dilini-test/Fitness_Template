@@ -117,6 +117,8 @@ public class LoginToAppmaker {
 				activeColumns.get(activeColumns.size() - 1).click();
 				Thread.sleep(4000);
 				
+				System.out.println("app selected--------------------------");
+				
 		//-----------------------------*********************************
 	}
 
@@ -260,7 +262,7 @@ public class LoginToAppmaker {
 
 	// Create new Category
 	//------------------------------------------------------------------***************************************************-----------------------
-
+/*
 	@Test(enabled = false) // (priority=4)
 	public void AddNewCategory() throws Exception {
 	
@@ -1029,11 +1031,11 @@ public class LoginToAppmaker {
 		System.out.println("-------------------------Sub category Deleted- Done -------------------------------->>");
 	
 	}
-	
+*/	
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
 
-	@Test(priority = 11 ) // (priority=5)
+	@Test(priority = 03 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
 		
