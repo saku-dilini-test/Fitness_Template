@@ -27,8 +27,6 @@ public class LoginToAppmaker {
 
 	public String baseURL ="https://appmakercms.otenro.com/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
-	//String driverPath = "C:\\Automation_with_Jenkins\\SetWithJenkins\\Astro_Run_With_Jenkins\\ChromeDr\\chromedriver.exe";
-	//String driverPath ="/usr/bin/google-chrome";
 	
 	public WebDriver driver;
 	public String Appname;
@@ -41,9 +39,6 @@ public class LoginToAppmaker {
 
 		System.out.println("Launching Chrome Browser ");
 		System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
-		//System.setProperty("webdriver.chrome.driver",driverPath);
-		//System.setProperty("webdriver.chrome.logfile",driverPath);
-		//sSystem.setProperty("java.awt.headless", "false");
 		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
@@ -60,8 +55,6 @@ public class LoginToAppmaker {
 		options.addArguments("--proxy-bypass-list=*");
 		options.addArguments("--Djava.awt.headless=true");
 		
-		
-		
 		driver = new ChromeDriver(options);
 		
 		System.out.println("Browser launched");
@@ -77,6 +70,9 @@ public class LoginToAppmaker {
 		
 
 		driver.get(baseURL);
+		
+		System.out.println("--------------------------Starting to login to CMS -------------------------------->>");
+
 		
 		driver.manage().deleteAllCookies();
 		System.out.println("All cookies Deleted");
@@ -112,18 +108,16 @@ public class LoginToAppmaker {
 		}
  
 		Thread.sleep(6000);
-
-		
 	}
 
 	// Create new App
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
-	
-	
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
+		
+		System.out.println("--------------------------Starting to create new app using ASTRO template-------------------------------->>");
 
 		driver.findElement(By.name("Create_New_App")).click();
 		System.out.println("Select a app button clicked");
@@ -225,12 +219,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("GetStarted_Btn")).click();
 		System.out.println("Get Started button clicked");
 		Thread.sleep(7000);
-
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		//driver.findElement(By.name("yes_btn")).click();
-		//Thread.sleep(2000);
-		//driver.findElement(By.name("yes_btn")).click();
 		
 		WebElement element1 = driver.findElement(By.name("yes_btn"));
 		JavascriptExecutor executor1 = (JavascriptExecutor)driver;
@@ -337,18 +325,6 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(1000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.png");
-		
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -390,6 +366,7 @@ public class LoginToAppmaker {
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", element); 
 		Thread.sleep(5000);
+		
 // Validation capturing
 
 		String actual_msg2 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
@@ -436,19 +413,6 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(1000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
-
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -575,17 +539,6 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(1000);
 
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -768,19 +721,6 @@ public class LoginToAppmaker {
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic19.jpg");
 
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 
@@ -865,17 +805,6 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(1000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic12.png");
-		
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -964,13 +893,11 @@ public class LoginToAppmaker {
 	}
 	
 	//------------------------------------------------------------------------********************************************************************
-
 	
-
 	@Test(priority = 9 ) // (priority=4)
 	public void EditSubCategory() throws Exception {
 		
-		System.out.println("-------------------------Edit category -------------------------------->>");
+		System.out.println("-------------------------Editing Sub category -------------------------------->>");
 
 		List<WebElement> b = driver.findElements(By.name("edit_btn"));
 		Thread.sleep(1000);
@@ -1005,18 +932,6 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(1000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
-
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1069,7 +984,7 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(5000);
 		
-		System.out.println("-------------------------Edit category Done-------------------------------->>");
+		System.out.println("-------------------------Sub category editing Done-------------------------------->>");
 
 	}
 //-----------------------------------------------------------------------------------***************************************************************
@@ -1077,7 +992,7 @@ public class LoginToAppmaker {
 	@Test(priority = 10 ) // (priority=4)
 	public void DeleteSubCategory() throws Exception {
 		
-		System.out.println("-------------------------Delete category -------------------------------->>");
+		System.out.println("-------------------------Deleting Sub category -------------------------------->>");
 		
 		List<WebElement> b = driver.findElements(By.name("delete_btn"));
 		Thread.sleep(1000);
@@ -1101,7 +1016,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("close_btn")).click();
 		Thread.sleep(2000);
 		
-		System.out.println("-------------------------Delete category Done -------------------------------->>");
+		System.out.println("-------------------------Sub category Deleted- Done -------------------------------->>");
 
 	}
 /*	
