@@ -20,6 +20,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -1524,12 +1525,13 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(2000);
 		
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/6mbpdf.pdf");
+		
+		robot.setAutoDelay(100);
+		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----pdf uploaded---->>");
-		
 
-		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect7 = "Try Again  Maximum PDF file size allowed is 5MB !";
 
 		if (actual_msg7.contains(expect7)) {
@@ -1590,8 +1592,7 @@ public class LoginToAppmaker {
 
 	}
 	//-----------------------------------------------***********************************************************--------------------------------	
-/*		
-	}
+		
 	@Test(priority = 12 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
@@ -1893,29 +1894,13 @@ public class LoginToAppmaker {
 //For the page description image has been added from below code --------------------------------------------------------------------------------
 	*/	
 	
-	/*----------------Uncomit this--------------------------------------
-	
 	 
 		JavascriptExecutor js21 = (JavascriptExecutor) driver;
 		js21.executeScript("arguments[0].click();", driver.findElement(By.className("ql-image")));
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton122 = new StringSelection("C:\\Appmaker Automation\\Images\\12.jpeg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton122, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic7.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1953,7 +1938,6 @@ public class LoginToAppmaker {
 		System.out.println("------Font selected ---->>");
 		Thread.sleep(3000);		
 		*/
-	/*------------uncomit this----------------------
 	
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
 		Thread.sleep(2000);
@@ -1976,8 +1960,7 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("------Publish button clicked---->>");
 
-		String actual_msg2 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]"))
-				.getAttribute("innerHTML");
+		String actual_msg2 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect2 = "Your article has successfully been published ";
 
 		if (actual_msg2.contains(expect2)) {
@@ -1987,11 +1970,17 @@ public class LoginToAppmaker {
 		}
 
 		Thread.sleep(4000);
+		
+		System.out.println("---------------------------------------Page added from manage pages-------------------------->>>>>>");
+
 	
 	}
 
 	@Test(priority = 14 ) // (priority=6)
 	public void From_Manage_pages_Duplcate_pages() throws Exception {
+		
+		System.out.println("---------------------------------------Duplacting pages---------------------------------->>>>");
+
 		
 		List<WebElement> b3 = driver.findElements(By.name("articleselect"));
 		b3.get(1).click();
@@ -2002,11 +1991,17 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("------Duplicate_btn clicked---->>");
 		
+		System.out.println("---------------------------------------Pages Duplacted------------------------------------>>>>");
+
+		
 	}
 	
 	//-----------------------------------------------------------------************************************************-----------------------
 	@Test(priority = 15 ) // (priority=6)
 	public void Delete_Page() throws Exception {
+		
+		System.out.println("---------------------------------------Page deleating-------------------------->>>>");
+
 		
 		List<WebElement> b3 = driver.findElements(By.name("articleselect"));
 		b3.get(2).click();
@@ -2033,15 +2028,20 @@ public class LoginToAppmaker {
 
 		Thread.sleep(6000);
 		
+		System.out.println("---------------------------------------Page Deleted-------------------------->>>>");
+
+		
 	}
-	
+
 	//-------------------------------------------------------------------------*********************************************888-------------
 
 
 	@Test(priority = 16 ) // (priority=6)
 	public void VerifyAppDetailsPages() throws Exception {
 		
+		System.out.println("---------------------------------------Adding app details-------------------------->>>>");
 
+		
 		List<WebElement> b = driver.findElements(By.name("Inner_Pages"));
 		Thread.sleep(1000);
 		b.get(4).click(); // can change inside page inner pages
@@ -2139,13 +2139,14 @@ public class LoginToAppmaker {
 
 		driver.findElement(By.name("back_arrow")).click();
 		Thread.sleep(5000);
+		
+		System.out.println("---------------------------------------Page details added-------------------------->>>>");
+
 	
 	}
 
 	@Test(priority = 17 ) // (priority=7)
 	public void AddLogo() throws Exception {
-
-		
 
 		driver.findElement(By.name("design_btn")).click();
 		System.out.println("----Design button clicked---->>");
@@ -2162,7 +2163,7 @@ public class LoginToAppmaker {
 		System.out.println("----Call JS function uploadLogoToArea---->>");
 		Thread.sleep(5000);
 
-		driver.findElement(By.id("fileInput")).sendKeys("C:\\Appmaker Automation\\Images\\HI-RES ICON\\HI-RES ICON 1.png");
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON1.png");
 
 		Thread.sleep(2000);
 
@@ -2183,7 +2184,7 @@ public class LoginToAppmaker {
 		System.out.println("----Call JS function uploadLogoToArea---->>");
 		Thread.sleep(5000);
 
-		driver.findElement(By.id("fileInput")).sendKeys("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\LOGO IMAGE\\LOGO IMAGE 3.png");
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/LOGO_IMAGE/LOGOIMAGE3.png");
 
 		Thread.sleep(10000);
 
@@ -2220,7 +2221,7 @@ public class LoginToAppmaker {
 		
 //Check fav icon validations 
 		
-		driver.findElement(By.name("Upload_fav")).sendKeys("C:\\Appmaker Automation\\Images\\LOGO IMAGE\\download.png");
+		driver.findElement(By.name("Upload_fav")).sendKeys("/home/Images/comic/LOGO_IMAGE/LOGOIMAGE3.png");
 		System.out.println("----FAV Icon upoaded---->>");
 		Thread.sleep(5000);
 
@@ -2237,8 +2238,7 @@ public class LoginToAppmaker {
 		
 //Upload correct Fav Icon 		
 	
-
-		driver.findElement(By.name("Upload_fav")).sendKeys("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\UPLOAD FAV ICON\\FAV ICON 2.ico");
+		driver.findElement(By.name("Upload_fav")).sendKeys("/home/Images/comic/UPLOAD_FAV_ICON/FAVICON2.ico");
 		System.out.println("----FAV Icon upoaded---->>");
 		Thread.sleep(5000);
 
@@ -2540,7 +2540,7 @@ public class LoginToAppmaker {
 		System.out.println("description entered ");
 		Thread.sleep(2000);
 		
-		driver.findElement(By.name("img1")).sendKeys("C:\\Appmaker Automation\\Images\\HI-RES ICON\\HI-RES ICON 1.png");
+		driver.findElement(By.name("img1")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON1.png");
 		System.out.println("Image uploaded");
 		Thread.sleep(2000);
 		
@@ -2558,9 +2558,6 @@ public class LoginToAppmaker {
 		// other wise it will be a paid app and you can't select "FREE APP (NOTE : APP
 		// CREATOR WILL BE CHARGED )" checkbox
 		// below process is for free app publishing process
-
-	
-
 
 		driver.findElement(By.name("publish_btn")).click();
 		System.out.println("----Publish button clicked---->>");
@@ -2594,21 +2591,8 @@ public class LoginToAppmaker {
 		action.moveToElement(we).moveToElement(driver.findElement(By.name("hI-rES_ICON_btn"))).click().build().perform();
 
 		robot.setAutoDelay(4000);
-		StringSelection stringselecton = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\HI-RES ICON\\HI-RES ICON 18.png");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON18.png");
 
 		robot.setAutoDelay(2000);
 
@@ -2621,22 +2605,8 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(1000);
 
-		StringSelection stringselecton1 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\FEATURE GRAPHIC\\FEATURE GRAPHIC 12.png");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/FEATURE_GRAPHIC/FEATUREGRAPHIC5.png");
+		
 		robot.setAutoDelay(2000);
 		System.out.println("----FEATURE GRAPHIC image entered---->>");
 		Thread.sleep(7000);
@@ -2648,21 +2618,8 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(2000);
 
-		StringSelection stringselecton2 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Splash screen\\SPLASHSCREEN 6.png");
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Splash_screen/SPLASHSCREEN6.png");
 
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton2, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----SPLASH SCREEN image entered---->>");
@@ -2828,7 +2785,6 @@ public class LoginToAppmaker {
 		System.out.println("----Enabled checkbox Clicked for hutch---->>");
 		Thread.sleep(4000);	
 
-		
 		List<WebElement> c = driver.findElements(By.name("txtAccountNumber"));
 		c.get(1).sendKeys("1");
 				
@@ -2921,7 +2877,7 @@ public class LoginToAppmaker {
 		/*
 		
 		driver.findElement(By.xpath("//*[@id=\"tab-content-113\"]/div/div[2]/form/table/tbody/tr[2]/td[4]/md-checkbox/div[1]")).click();
-		System.out.println("----Enabled checkbox Clicked for Hutch---->>");
+		System.out.println("----Enabled checkbox Clicked for Airtel---->>");
 		Thread.sleep(4000);	
 		
 		List<WebElement> aa = driver.findElements(By.name("txtAccountNumber"));
@@ -2962,8 +2918,6 @@ public class LoginToAppmaker {
 		
 		List<WebElement> aa1 = driver.findElements(By.name("txtAccountNumber"));
 		aa1.get(2).sendKeys("3"); */
-	
-	/*------------uncomit this ------------
 	
 		driver.findElement(By.className("automation-op-config-btn-save")).click();
 		System.out.println("----Save btn Clicked---->>");
@@ -3019,8 +2973,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("LogOut")).click();
 		System.out.println("Successfully logged out ");
 		Thread.sleep(7000);
-
-	
 
 	}
 	
