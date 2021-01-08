@@ -1568,8 +1568,8 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		System.out.println("----PDF check box clicked---->>");
 		
-		JavascriptExecutor js4 = (JavascriptExecutor) driver;
-		js4.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
+		//JavascriptExecutor js4 = (JavascriptExecutor) driver;
+		//js4.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 
 		robot.setAutoDelay(2000);
 		
