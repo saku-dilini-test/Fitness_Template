@@ -1547,7 +1547,7 @@ public class LoginToAppmaker {
 		
 		robot.setAutoDelay(2000);
 		
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/6mbpdf.pdf");
+		driver.findElement(By.cssSelector("div:nth-child(1) > .btn")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
 		System.out.println("----pdf uploaded---->>");
@@ -1573,7 +1573,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(2000);
 		
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/file-example_PDF_1MB.pdf");
+		driver.findElement(By.cssSelector("div:nth-child(1) > .btn")).sendKeys("/home/Images/comic/file-example_PDF_1MB.pdf");
 		robot.setAutoDelay(2000);
 		System.out.println("----pdf uploaded---->>");
 		
