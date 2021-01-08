@@ -1046,8 +1046,6 @@ public class LoginToAppmaker {
 		
 //--------------------------*********************************************	
 		
-		
-		
 		System.out.println("-------------------------Adding new Page -------------------------------->>");
 
 		List<WebElement> b = driver.findElements(By.name("Inner_Pages"));
@@ -1540,8 +1538,8 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		System.out.println("----PDF checkbox clicked---->>");
 		
-		//JavascriptExecutor js81 = (JavascriptExecutor) driver;
-		//js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
+		JavascriptExecutor js81 = (JavascriptExecutor) driver;
+		js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
 		robot.setAutoDelay(2000);
 		
@@ -1611,7 +1609,7 @@ public class LoginToAppmaker {
 
 	}
 	//-----------------------------------------------***********************************************************--------------------------------	
-		
+/*		
 	@Test(priority = 12 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
@@ -1913,7 +1911,9 @@ public class LoginToAppmaker {
 //For the page description image has been added from below code --------------------------------------------------------------------------------
 	*/	
 	
-	 
+	 //---------comit here ---------
+	
+/*	
 		JavascriptExecutor js21 = (JavascriptExecutor) driver;
 		js21.executeScript("arguments[0].click();", driver.findElement(By.className("ql-image")));
 
@@ -1958,6 +1958,9 @@ public class LoginToAppmaker {
 		Thread.sleep(3000);		
 		*/
 	
+	 //---------comit here ---------
+	
+	/*
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
 		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
@@ -2937,6 +2940,9 @@ public class LoginToAppmaker {
 		
 		List<WebElement> aa1 = driver.findElements(By.name("txtAccountNumber"));
 		aa1.get(2).sendKeys("3"); */
+	
+	 //---------comit here ---------
+	/*
 	
 		driver.findElement(By.className("automation-op-config-btn-save")).click();
 		System.out.println("----Save btn Clicked---->>");
