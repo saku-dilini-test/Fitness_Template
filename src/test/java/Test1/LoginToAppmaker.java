@@ -208,7 +208,7 @@ public class LoginToAppmaker {
 		String copiedText = driver.findElement(By.name("appName")).getAttribute("value").toString();
 		Thread.sleep(1000);
 
-		File file = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+		File file = new File("/home/Images/comic/TxtWrite.txt");
 		FileWriter fw = new FileWriter(file);
 		BufferedWriter writer = new BufferedWriter(fw);
 		writer.write(copiedText);
@@ -1017,16 +1017,17 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		
 		System.out.println("-------------------------Sub category Deleted- Done -------------------------------->>");
-
+	
 	}
-/*	
+	
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
 
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
-		
+		System.out.println("-------------------------Adding new Page -------------------------------->>");
+
 		List<WebElement> b = driver.findElements(By.name("Inner_Pages"));
 		Thread.sleep(1000);
 		b.get(0).click(); // can change inside page inner pages
@@ -1087,28 +1088,16 @@ public class LoginToAppmaker {
 		js1.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 		robot.setAutoDelay(1000);
 
-//Below code is for capturing image validation part, image should be less than 5 mb
-		
-		StringSelection stringselecton12 = new StringSelection("C:\\Appmaker Automation\\Images\\5mb image.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton12, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+//Below code is for capturing image validation part, image should be less than 5 mb--------------------------------------------
+			
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
+						
+		robot.setAutoDelay(100);
+		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 		
-		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect21 = "Image should be less than 5MB";
 
 		if (actual_msg21.contains(expect21)) {
@@ -1130,23 +1119,9 @@ public class LoginToAppmaker {
 		JavascriptExecutor js14 = (JavascriptExecutor) driver;
 		js14.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
-		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 14.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton, null);
 		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1204,22 +1179,8 @@ public class LoginToAppmaker {
 		js2.executeScript("arguments[0].click();", driver.findElement(By.name("Select_Img_btn")));
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton1 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 14.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1313,28 +1274,14 @@ public class LoginToAppmaker {
 		
 //For the page description image has been added from below code --------------------------------------------------------------------------------
  
-	/*----to her comitted ------
+	
 	 
 		JavascriptExecutor js21 = (JavascriptExecutor) driver;
 		js21.executeScript("arguments[0].click();", driver.findElement(By.className("ql-image")));
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton122 = new StringSelection("C:\\Appmaker Automation\\Images\\12.jpeg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton122, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic6.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1412,7 +1359,7 @@ public class LoginToAppmaker {
 		System.out.println("------Page details entered---->>");
 		*/
 	
-/*-----Uncomit this ---------------------		
+	
 		
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
 		Thread.sleep(2000);
@@ -1503,7 +1450,12 @@ public class LoginToAppmaker {
 
 		Thread.sleep(4000);
 		
+		System.out.println("---------------------------------------Page added successfully--------------------------");
+
+		
 // --------***********************************--------------------- Add new page with PDF-----------------------------------------***************************************---------------------------------------
+	
+		System.out.println("---------------------------------------Adding page with PDF--------------------------");
 		
 		driver.findElement(By.name("Create_page_btn")).click();
 		Thread.sleep(4000);
@@ -1517,22 +1469,8 @@ public class LoginToAppmaker {
 		js8.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton4 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 14.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton4, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic10.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1584,22 +1522,8 @@ public class LoginToAppmaker {
 		js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton41 = new StringSelection("C:\\Appmaker Automation\\Images\\6mbpdf.pdf");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton41, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----pdf uploaded---->>");
@@ -1626,23 +1550,8 @@ public class LoginToAppmaker {
 		js4.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton5 = new StringSelection("C:\\Appmaker Automation\\Images\\file-example_PDF_1MB.pdf");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton5, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/file-example_PDF_1MB.pdf");
 		robot.setAutoDelay(2000);
 		System.out.println("----pdf uploaded---->>");
 		
@@ -1659,8 +1568,7 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("------Publish button clicked---->>");
 
-		String actual_msg4 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]"))
-				.getAttribute("innerHTML");
+		String actual_msg4 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect4 = "Your article has successfully been published ";
 
 		if (actual_msg4.contains(expect4)) {
@@ -1678,12 +1586,17 @@ public class LoginToAppmaker {
 		
 		System.out.println("------Entred text to search---->>");
 	
+		System.out.println("---------------------------------------PDF page added--------------------------");
+
+	}
 	//-----------------------------------------------***********************************************************--------------------------------	
-		
+/*		
 	}
 	@Test(priority = 12 ) // (priority=6)
 	public void Edit_Page() throws Exception {
-		
+	
+		System.out.println("---------------------------------------Going to Edit the page--------------------------");
+
 		List<WebElement> b3 = driver.findElements(By.name("edit_article"));
 		b3.get(0).click();
 		System.out.println("------Edit page clicked---->>");
@@ -1703,22 +1616,8 @@ public class LoginToAppmaker {
 		Robot robot = new Robot();
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton4 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 14.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton4, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic1.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1784,15 +1683,17 @@ public class LoginToAppmaker {
 		}
 		Thread.sleep(3000);
 	
+		System.out.println("---------------------------------------Page edited--------------------------");
 
 		
-
 	}
 	//-------------------------------------------------------------*******Add_Page_From_MangePages*****------------------------------------------\
 	
 	@Test(priority = 13 ) // (priority=6)
 	public void Add_Page_From_MangePages() throws Exception {
-		
+	
+		System.out.println("---------------------------------------Adding page from manage pages--------------------------");
+
 		driver.findElement(By.name("Create_page_btn")).click();
 		Thread.sleep(2000);
 		System.out.println("------ Create_page_btn clicked---->>");
@@ -1808,26 +1709,15 @@ public class LoginToAppmaker {
 
 //Below code is for capturing image validation part, image should be less than 5 mb
 		
-		StringSelection stringselecton12 = new StringSelection("C:\\Appmaker Automation\\Images\\5mb image.jpg");
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
+				
+		robot.setAutoDelay(100);
+		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton12, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 		
-		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect21 = "Image should be less than 5MB";
 
 		if (actual_msg21.contains(expect21)) {
@@ -1850,22 +1740,8 @@ public class LoginToAppmaker {
 		js14.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
 		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 14.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic2.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -1924,21 +1800,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(2000);
 
-		StringSelection stringselecton1 = new StringSelection("C:\\Appmaker Automation\\Article smoke Testing Process\\Images\\Comic imges\\Comic 14.jpg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton1, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic5.jpg");
 
 		robot.setAutoDelay(2000);
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
@@ -3492,6 +3354,6 @@ public class LoginToAppmaker {
 			Thread.sleep(10000);
 	}
 	*/
-}
+	}	
 	
 
