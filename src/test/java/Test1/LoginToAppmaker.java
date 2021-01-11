@@ -1477,7 +1477,8 @@ public class LoginToAppmaker {
 
 		
 // --------***********************************--------------------- Add new page with PDF-----------------------------------------***************************************---------------------------------------
-	
+
+/*		
 		System.out.println("---------------------------------------Adding page with PDF--------------------------");
 		
 		driver.findElement(By.name("Create_page_btn")).click();
@@ -1607,10 +1608,10 @@ public class LoginToAppmaker {
 		System.out.println("------Entred text to search---->>");
 	
 		System.out.println("---------------------------------------PDF page added--------------------------");
-
+*/
 	}
 	//-----------------------------------------------***********************************************************--------------------------------	
-/*		
+	
 	@Test(priority = 12 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
@@ -1912,9 +1913,7 @@ public class LoginToAppmaker {
 //For the page description image has been added from below code --------------------------------------------------------------------------------
 	*/	
 	
-	 //---------comit here ---------
 	
-/*	
 		JavascriptExecutor js21 = (JavascriptExecutor) driver;
 		js21.executeScript("arguments[0].click();", driver.findElement(By.className("ql-image")));
 
@@ -1959,9 +1958,7 @@ public class LoginToAppmaker {
 		Thread.sleep(3000);		
 		*/
 	
-	 //---------comit here ---------
-	
-	/*
+
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
 		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
@@ -1998,7 +1995,7 @@ public class LoginToAppmaker {
 
 	
 	}
-
+/*
 	@Test(priority = 14 ) // (priority=6)
 	public void From_Manage_pages_Duplcate_pages() throws Exception {
 		
