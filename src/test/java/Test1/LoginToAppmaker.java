@@ -2613,9 +2613,9 @@ public class LoginToAppmaker {
 
 		Robot robot = new Robot();
 
-		Actions action = new Actions(driver);
-		WebElement we = driver.findElement(By.name("thumbPic1"));
-		action.moveToElement(we).moveToElement(driver.findElement(By.name("hI-rES_ICON_btn"))).click().build().perform();
+		//Actions action = new Actions(driver);
+		//WebElement we = driver.findElement(By.name("thumbPic1"));
+		//action.moveToElement(we).moveToElement(driver.findElement(By.name("hI-rES_ICON_btn"))).click().build().perform();
 
 		robot.setAutoDelay(4000);
 		
@@ -2626,9 +2626,9 @@ public class LoginToAppmaker {
 		System.out.println("----HI-RES ICON entered---->>");
 		Thread.sleep(7000);
 
-		Actions action1 = new Actions(driver);
-		WebElement we1 = driver.findElement(By.name("thumbPic2"));
-		action1.moveToElement(we1).moveToElement(driver.findElement(By.name("FEATURE_GRAPHIC_btn"))).click().build().perform();
+		//Actions action1 = new Actions(driver);
+		//WebElement we1 = driver.findElement(By.name("thumbPic2"));
+		//action1.moveToElement(we1).moveToElement(driver.findElement(By.name("FEATURE_GRAPHIC_btn"))).click().build().perform();
 
 		robot.setAutoDelay(1000);
 
@@ -2638,10 +2638,9 @@ public class LoginToAppmaker {
 		System.out.println("----FEATURE GRAPHIC image entered---->>");
 		Thread.sleep(7000);
 
-		Actions action2 = new Actions(driver);
-
-		WebElement a1 = driver.findElement(By.name("thumbPic3"));
-		action2.moveToElement(a1).moveToElement(driver.findElement(By.name("SPLASH_SCREEN_btn"))).click().build().perform();
+		//Actions action2 = new Actions(driver);
+		//WebElement a1 = driver.findElement(By.name("thumbPic3"));
+		//action2.moveToElement(a1).moveToElement(driver.findElement(By.name("SPLASH_SCREEN_btn"))).click().build().perform();
 
 		robot.setAutoDelay(2000);
 
