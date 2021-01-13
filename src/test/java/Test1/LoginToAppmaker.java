@@ -1992,8 +1992,8 @@ public class LoginToAppmaker {
 
 	
 	}
-/*
-	@Test(priority = 14 ) // (priority=6)
+
+	@Test(priority = 14  ) // (priority=6)
 	public void From_Manage_pages_Duplcate_pages() throws Exception {
 		
 		System.out.println("---------------------------------------Duplacting pages---------------------------------->>>>");
@@ -2280,7 +2280,7 @@ public class LoginToAppmaker {
 		
 
 	}
-
+/*
 	@Test(priority = 19 ) // (priority=9)
 	public void ChangeLookAndFeel() throws Exception {
 		
