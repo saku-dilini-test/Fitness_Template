@@ -2290,7 +2290,7 @@ public class LoginToAppmaker {
 	@Test(priority = 19 ) // (priority=9)
 	public void ChangeLookAndFeel() throws Exception {
 		
-		System.out.println("---------------------------------------Going to add Look and Fee colors-------------------------->>>>");
+		System.out.println("---------------------------------------Going to add Look and Feel colors-------------------------->>>>");
 
 		driver.findElement(By.name("Look_And_feel_btn")).click();
 		System.out.println("----Look & Feel button clicked---->>");
@@ -2335,7 +2335,7 @@ public class LoginToAppmaker {
 
 		driver.findElement(By.name("Navigationbackcolor")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("/html/body/div[5]/div/button")).click();
+		driver.findElement(By.cssSelector(".colorpicker-visible .close")).click();
 		Thread.sleep(2000);
 
 ////////////////////////////////////////---------------- Navigation Font Color process-----------------------//////////////////////////////////////////////
@@ -2709,7 +2709,7 @@ public class LoginToAppmaker {
 		
 	}
 /*
-		@Test(priority = 22 ) // (priority=10)
+		@Test(priority = 22 ) // (priority=10)	
 		public void VerifyConfigurationSection() throws Exception {
 		
 		List<WebElement> A = driver.findElements(By.className("automation-op-config-cb-op-enabled"));
