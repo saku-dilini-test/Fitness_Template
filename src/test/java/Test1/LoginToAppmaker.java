@@ -126,7 +126,7 @@ public class LoginToAppmaker {
 	}
 
 	// Create new App
-	
+/*	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
 	@Test(enabled = false) // (priority=3)
@@ -154,6 +154,9 @@ public class LoginToAppmaker {
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		Thread.sleep(4000);*/
 	
+/*---------uncomit
+ 
+ 
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
 		a.get(0).click();
 		System.out.println("Astro Template selected ");
