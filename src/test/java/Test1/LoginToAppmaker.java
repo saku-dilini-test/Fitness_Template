@@ -110,7 +110,7 @@ public class LoginToAppmaker {
  
 		Thread.sleep(6000);
 		
-		
+	/*	
 		//-----------------------********************
 				List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
 				Thread.sleep(1000);
@@ -119,17 +119,17 @@ public class LoginToAppmaker {
 				
 				System.out.println("app selected--------------------------");
 				
-				Thread.sleep(6000);
+				Thread.sleep(6000);*/
 				
 				
 		//-----------------------------*********************************
 	}
 
 	// Create new App
-/*	
+	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
-	@Test(enabled = false) // (priority=3)
+	@Test(priority = 3) // (priority=3)
 	public void CreateNewApp() throws Exception {
 		
 		System.out.println("--------------------------Starting to create new app using ASTRO template-------------------------------->>");
@@ -154,7 +154,7 @@ public class LoginToAppmaker {
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		Thread.sleep(4000);*/
 	
-/*---------uncomit
+
  
  
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
@@ -268,8 +268,8 @@ public class LoginToAppmaker {
 
 	// Create new Category
 	//------------------------------------------------------------------***************************************************-----------------------
-/*
-	@Test(enabled = false) // (priority=4)
+
+	@Test(priority = 4) // (priority=4)
 	public void AddNewCategory() throws Exception {
 	
 		System.out.println("--------------------------Starting to add new category-------------------------------->>");
@@ -519,7 +519,7 @@ public class LoginToAppmaker {
 	//-----------------------------------------------------------**************************************************--------------------------------
 
  
-	@Test(enabled = false) // (priority=4)
+	@Test(priority = 5 ) // (priority=4)
 	public void Edit_Category() throws Exception {
 		
 		System.out.println("--------------------------Editing category-------------------------------->>");
@@ -616,7 +616,7 @@ public class LoginToAppmaker {
 	}
 //-----------------------------------------------------------Category order change and check---------------------------------------------------------
 	
-	@Test(enabled = false) // (priority=4)
+	@Test(priority = 6 ) // (priority=4)
 	public void Category_Order() throws Exception {
 		
 		System.out.println("--------------------------Category Ordering-------------------------------->>");
@@ -640,7 +640,7 @@ public class LoginToAppmaker {
 	
 	//----------------------------------------------------******************************************************************************************
 	
-	@Test(enabled = false) // (priority=4)
+	@Test(priority = 7) // (priority=4)
 	public void Delete_Category() throws Exception {
 		
 		System.out.println("--------------------------Delete Category-------------------------------->>");
@@ -670,7 +670,7 @@ public class LoginToAppmaker {
 	
 	//--------------------------------------------------------------*****************************************************-------------------------
 
-	@Test(enabled = false) // (priority=4)
+	@Test(priority = 8 ) // (priority=4)
 	public void AddSubCategory() throws Exception {
 		
 		System.out.println("--------------------------Adding Sub Category-------------------------------->>");
@@ -912,7 +912,7 @@ public class LoginToAppmaker {
 	
 	//------------------------------------------------------------------------********************************************************************
 	
-	@Test(enabled = false) // (priority=4)
+	@Test(priority = 9 ) // (priority=4)
 	public void EditSubCategory() throws Exception {
 		
 		System.out.println("-------------------------Editing Sub category -------------------------------->>");
@@ -1007,7 +1007,7 @@ public class LoginToAppmaker {
 	}
 //-----------------------------------------------------------------------------------***************************************************************
 	
-	@Test(enabled = false) // (priority=4)
+	@Test(priority = 10 ) // (priority=4)
 	public void DeleteSubCategory() throws Exception {
 		
 		System.out.println("-------------------------Deleting Sub category -------------------------------->>");
@@ -1037,11 +1037,11 @@ public class LoginToAppmaker {
 		System.out.println("-------------------------Sub category Deleted- Done -------------------------------->>");
 	
 	}
-*/	
+	
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
 
-	@Test(priority = 3 ) // (priority=5)
+	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
 		
@@ -1391,7 +1391,7 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
 
-		List<WebElement> b1 = driver.findElements(By.name("main_category"));//mainsub_cat
+		List<WebElement> b1 = driver.findElements(By.name("mainsub_cat"));//main_category
 		b1.get(0).click();
 		System.out.println("------main_category clicked---->>");
 		Thread.sleep(2000);
@@ -1615,7 +1615,7 @@ public class LoginToAppmaker {
 	}
 	//-----------------------------------------------***********************************************************--------------------------------	
 	
-	@Test(priority = 4 ) // (priority=6)
+	@Test(priority = 12 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
 		System.out.println("---------------------------------------Going to Edit the page--------------------------");
@@ -1712,7 +1712,7 @@ public class LoginToAppmaker {
 	}
 	//-------------------------------------------------------------*******Add_Page_From_MangePages*****------------------------------------------\
 	
-	@Test(priority = 5 ) // (priority=6)
+	@Test(priority = 13 ) // (priority=6)
 	public void Add_Page_From_MangePages() throws Exception {
 	
 		System.out.println("---------------------------------------Adding page from manage pages--------------------------");
