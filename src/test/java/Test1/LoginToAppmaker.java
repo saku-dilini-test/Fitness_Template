@@ -1612,7 +1612,7 @@ public class LoginToAppmaker {
 	}
 	//-----------------------------------------------***********************************************************--------------------------------	
 	
-	@Test(priority = 12 ) // (priority=6)
+	@Test(priority = 04 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
 		System.out.println("---------------------------------------Going to Edit the page--------------------------");
