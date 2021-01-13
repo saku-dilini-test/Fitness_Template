@@ -2619,7 +2619,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(4000);
 		
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON18.png");
+		driver.findElement(By.name("hI-rES_ICON_btn")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON18.png");
 
 		robot.setAutoDelay(2000);
 
@@ -2632,7 +2632,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(1000);
 
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/FEATURE_GRAPHIC/FEATUREGRAPHIC5.png");
+		driver.findElement(By.name("FEATURE_GRAPHIC_btn")).sendKeys("/home/Images/comic/FEATURE_GRAPHIC/FEATUREGRAPHIC5.png");
 		
 		robot.setAutoDelay(2000);
 		System.out.println("----FEATURE GRAPHIC image entered---->>");
@@ -2645,7 +2645,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(2000);
 
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Splash_screen/SPLASHSCREEN6.png");
+		driver.findElement(By.name("SPLASH_SCREEN_btn")).sendKeys("/home/Images/comic/Splash_screen/SPLASHSCREEN6.png");
 
 
 		robot.setAutoDelay(2000);
