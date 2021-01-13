@@ -1041,7 +1041,7 @@ public class LoginToAppmaker {
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
 
-	@Test(priority = 03 ) // (priority=5)
+	@Test(priority = 3 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
 		
@@ -1615,7 +1615,7 @@ public class LoginToAppmaker {
 	}
 	//-----------------------------------------------***********************************************************--------------------------------	
 	
-	@Test(priority = 04 ) // (priority=6)
+	@Test(priority = 4 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
 		System.out.println("---------------------------------------Going to Edit the page--------------------------");
@@ -1712,7 +1712,7 @@ public class LoginToAppmaker {
 	}
 	//-------------------------------------------------------------*******Add_Page_From_MangePages*****------------------------------------------\
 	
-	@Test(priority = 13 ) // (priority=6)
+	@Test(priority = 5 ) // (priority=6)
 	public void Add_Page_From_MangePages() throws Exception {
 	
 		System.out.println("---------------------------------------Adding page from manage pages--------------------------");
