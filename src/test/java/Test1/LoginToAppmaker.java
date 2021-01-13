@@ -1391,7 +1391,7 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
 
-		List<WebElement> b1 = driver.findElements(By.name("mainsub_cat"));
+		List<WebElement> b1 = driver.findElements(By.name("main_category"));//mainsub_cat
 		b1.get(0).click();
 		System.out.println("------main_category clicked---->>");
 		Thread.sleep(2000);
