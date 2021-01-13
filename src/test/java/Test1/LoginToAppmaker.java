@@ -1045,12 +1045,6 @@ public class LoginToAppmaker {
 	public void AddNewPage() throws Exception {
 		
 		
-//-----------------*********************************************************
-		driver.findElement(By.name("Pages")).click();
-		System.out.println("Commerce button clicked");
-		Thread.sleep(4000);
-		
-//--------------------------*********************************************	
 		
 		System.out.println("-------------------------Adding new Page -------------------------------->>");
 
