@@ -2164,6 +2164,8 @@ public class LoginToAppmaker {
 
 	@Test(priority = 17 ) // (priority=7)
 	public void AddLogo() throws Exception {
+		
+		System.out.println("---------------------------------------Going to add logo-------------------------->>>>");
 
 		driver.findElement(By.name("design_btn")).click();
 		System.out.println("----Design button clicked---->>");
@@ -2222,11 +2224,14 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("close_btn")).click();
 		Thread.sleep(2000);
 		
+		System.out.println("---------------------------------------Logo Added-------------------------->>>>");
+		
 	}
 
 	@Test(priority = 18 ) // (priority=8)
 	public void AddFAVIcon() throws Exception {
 		
+		System.out.println("---------------------------------------Going to add FAV icon-------------------------->>>>");
 
 		driver.findElement(By.name("Add_fav_icon_btn")).click();
 		System.out.println("----Add FAV Icon button clicked---->>");
@@ -2278,12 +2283,14 @@ public class LoginToAppmaker {
 		System.out.println("----Cancel button clicked and Pop up closed---->>");
 		Thread.sleep(4000);
 		
+		System.out.println("---------------------------------------FAV icon added-------------------------->>>>");
 
 	}
-/*
+
 	@Test(priority = 19 ) // (priority=9)
 	public void ChangeLookAndFeel() throws Exception {
 		
+		System.out.println("---------------------------------------Going to add Look and Fee colors-------------------------->>>>");
 
 		driver.findElement(By.name("Look_And_feel_btn")).click();
 		System.out.println("----Look & Feel button clicked---->>");
@@ -2542,12 +2549,15 @@ public class LoginToAppmaker {
 		driver.findElement(By.cssSelector(".ng-scope:nth-child(2) > .obl-subitem-section > .obl-menu-back > img")).click();
 	    Thread.sleep(3000);
 	    
+	    System.out.println("---------------------------------------Look and Feel Added-------------------------->>>>");
 		
 	}
 	
 
 	@Test(priority = 20 ) // (priority=10)
 	public void Report_A_Bug() throws Exception {
+
+		System.out.println("---------------------------------------Going to Report a bug-------------------------->>>>");
 		
 		driver.findElement(By.name("report_bug_btn")).click();
 		System.out.println("Report a bug cliked ");
@@ -2566,6 +2576,8 @@ public class LoginToAppmaker {
 		System.out.println("Report button clicked");
 		Thread.sleep(5000);
 		
+		System.out.println("---------------------------------------Report a bug added-------------------------->>>>");
+		
 	}
 
 	@Test(priority = 21 ) // (priority=10)
@@ -2575,6 +2587,8 @@ public class LoginToAppmaker {
 		// other wise it will be a paid app and you can't select "FREE APP (NOTE : APP
 		// CREATOR WILL BE CHARGED )" checkbox
 		// below process is for free app publishing process
+		
+		System.out.println("---------------------------------------Going to add publish Details-------------------------->>>>");
 
 		driver.findElement(By.name("publish_btn")).click();
 		System.out.println("----Publish button clicked---->>");
@@ -2583,10 +2597,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("submit_for_approvals")).click();
 		System.out.println("----Submit for Approvals clicked---->>");
 		Thread.sleep(5000);
-
-		//driver.findElement(By.name("Free_app_Checkbox")).click();
-		//System.out.println("----FREE APP (NOTE : APP CREATOR WILL BE CHARGED ) check box clicked---->>");
-		//Thread.sleep(5000);
 
 		driver.findElement(By.name("shortDescription")).sendKeys("Test 123");
 		System.out.println("----Short description entered---->>");
@@ -2695,9 +2705,10 @@ public class LoginToAppmaker {
 				
 		Thread.sleep(5000);
 		
+		System.out.println("---------------------------------------Publish details added-------------------------->>>>");
 		
 	}
-
+/*
 		@Test(priority = 22 ) // (priority=10)
 		public void VerifyConfigurationSection() throws Exception {
 		
