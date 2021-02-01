@@ -1044,12 +1044,15 @@ public class LoginToAppmaker {
 
 */ //----uncomit her 
 	
-	/* ------uncomi her 
+	
 	
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
-		
+		driver.findElement(By.name("Pages")).sendKeys("Testing1236");
+		System.out.println("----page clicked---->>");
+		Thread.sleep(2000);
+//-----------------------------*********************************************************************		
 		
 		System.out.println("-------------------------Adding new Page -------------------------------->>");
 
@@ -1397,11 +1400,11 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		
 		System.out.println("---------------------------------------Page added successfully--------------------------");
-*/ //uncomit here
+
 		
 // --------***********************************--------------------- Add new page with PDF-----------------------------------------***************************************---------------------------------------
 
-/*		
+
 		System.out.println("---------------------------------------Adding page with PDF--------------------------");
 		
 		driver.findElement(By.name("Create_page_btn")).click();
@@ -1411,7 +1414,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("title")).sendKeys("Testing PDF");
 		System.out.println("----Title Entered---->>");
 		Thread.sleep(2000);
-		
+
 		JavascriptExecutor js8 = (JavascriptExecutor) driver;
 		js8.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
 
@@ -1468,7 +1471,7 @@ public class LoginToAppmaker {
 		JavascriptExecutor js81 = (JavascriptExecutor) driver;
 		js81.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
 		
-		driver.findElement(By.cssSelector("div:nth-child(1) > .btn")).sendKeys("/home/Images/comic/6mbpdf.pdf");
+		driver.findElement(By.id("fileInputPdf")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 		Thread.sleep(2000);
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 
@@ -1495,7 +1498,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(2000);
 		
-		driver.findElement(By.cssSelector("div:nth-child(1) > .btn")).sendKeys("/home/Images/comic/file-example_PDF_1MB.pdf");
+		driver.findElement(By.id("fileInputPdf")).sendKeys("/home/Images/comic/file-example_PDF_1MB.pdf");
 		robot.setAutoDelay(2000);
 		System.out.println("----pdf uploaded---->>");
 		
@@ -1532,7 +1535,7 @@ public class LoginToAppmaker {
 	
 		System.out.println("---------------------------------------PDF page added--------------------------");
 
-	} */
+	} 
 	//-----------------------------------------------***********************************************************--------------------------------	
 
 
