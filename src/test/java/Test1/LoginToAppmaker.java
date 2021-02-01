@@ -1,4 +1,5 @@
 package Test1;
+import java.awt.AWTException;
 import java.awt.Robot;
 
 import java.awt.event.KeyEvent;
@@ -7,14 +8,19 @@ import java.io.BufferedWriter;
 import java.io.File;
 
 import java.io.FileWriter;
-
+import java.io.IOException;
 //import java.ut il.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -2462,7 +2468,7 @@ public class LoginToAppmaker {
 	}
 */
 	@Test(priority = 21 ) // (priority=10)
-	public void VerifyPublishSection() throws Exception {
+	public void VerifyPublishSection() throws IOException, InterruptedException, AWTException {
 
 		// For this if we are creating free app we need to make all the Categories free
 		// other wise it will be a paid app and you can't select "FREE APP (NOTE : APP
@@ -2500,7 +2506,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(4000);
 		
-		driver.findElement(By.name("hI-rES_ICON_btn")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON15.png");
+		driver.findElement(By.cssSelector("input[type='file'][name='hI-rES_ICON_btn']")).sendKeys("/home/Images/comic/HI-RES_ICON/HI-RESICON15.png");
 
 		robot.setAutoDelay(2000);
 
@@ -2513,7 +2519,7 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(1000);
 
-		driver.findElement(By.name("FEATURE_GRAPHIC_btn")).sendKeys("/home/Images/comic/FEATURE_GRAPHIC/FEATUREGRAPHIC10.png");
+		driver.findElement(By.cssSelector("input[type='file'][name='FEATURE_GRAPHIC_btn']")).sendKeys("/home/Images/comic/FEATURE_GRAPHIC/FEATUREGRAPHIC10.png");
 		
 		robot.setAutoDelay(2000);
 		System.out.println("----FEATURE GRAPHIC image entered---->>");
@@ -2526,11 +2532,11 @@ public class LoginToAppmaker {
 
 		robot.setAutoDelay(2000);
 
-		driver.findElement(By.name("SPLASH_SCREEN_btn")).sendKeys("/home/Images/comic/Splash_screen/SPLASHSCREEN8.png");
+		driver.findElement(By.cssSelector("input[type='file'][name='SPLASH_SCREEN_btn']")).sendKeys("/home/Images/comic/Splash_screen/SPLASHSCREEN8.png");
 
 
 		robot.setAutoDelay(2000);
-		System.out.println("----SPLASH SCREEN image entered---->>");
+		System.out.println("----SPLASH SCREEN image entered 111---->>");
 		Thread.sleep(7000);
 		
 		int leftLimit = 97; // letter 'a'
@@ -2570,7 +2576,7 @@ public class LoginToAppmaker {
 
 		driver.findElement(By.name("next_btn")).click();
 		System.out.println("----Next button entered---->>");
-				Thread.sleep(4000);	
+		Thread.sleep(4000);	
 				
 		String actual_msg=driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect="General information has been added successfully";
@@ -2587,6 +2593,15 @@ public class LoginToAppmaker {
 		Thread.sleep(5000);
 		
 		System.out.println("---------------------------------------Publish details added-------------------------->>>>");
+		
+		/*TakesScreenshot ts =  (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String desti = "C:\\Users\\simato\\Documents\\screenshots";
+		File destination = new File(desti);
+
+		FileUtils.copyFile(source, new File(""));*/
+		
+		
 		
 	}
 /*
