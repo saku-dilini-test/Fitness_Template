@@ -110,7 +110,7 @@ public class LoginToAppmaker {
  
 		Thread.sleep(6000);
 		
-	/*	
+		
 		//-----------------------********************
 				List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
 				Thread.sleep(1000);
@@ -119,7 +119,7 @@ public class LoginToAppmaker {
 				
 				System.out.println("app selected--------------------------");
 				
-				Thread.sleep(6000);*/
+				Thread.sleep(6000);
 				
 				
 		//-----------------------------*********************************
@@ -128,6 +128,9 @@ public class LoginToAppmaker {
 	// Create new App
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
+
+/* ---uncomit her
+ 
 
 	@Test(priority = 3) // (priority=3)
 	public void CreateNewApp() throws Exception {
@@ -149,14 +152,6 @@ public class LoginToAppmaker {
 		driver.navigate().refresh();
 		Thread.sleep(5000);
 
-		/*JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.cssSelector("#tab-content-0 > div > div:nth-child(7) > div > div.col-md-5.text-left > div.padding-top.margin-top"));
-		js.executeScript("arguments[0].scrollIntoView();", Element);
-		Thread.sleep(4000);*/
-	
-
- 
- 
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
 		a.get(0).click();
 		System.out.println("Astro Template selected ");
@@ -1041,6 +1036,10 @@ public class LoginToAppmaker {
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
 
+*/ //----uncomit her 
+	
+	/* ------uncomi her 
+	
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
@@ -1271,26 +1270,6 @@ public class LoginToAppmaker {
 		Thread.sleep(3000);
 		
 		Pagedescription.click();
-		/*
-		driver.findElement(By.className("ql-picker-label")).click();
-		System.out.println("------Text color button clicked ---->>");
-		Thread.sleep(3000);
-		
-		driver.findElement(By.className("ql-picker-item ql-primary")).click();
-		System.out.println("------Text color selected ---->>");
-		Thread.sleep(3000); 
-		
-		driver.findElement(By.xpath("//*[@id=\"dialogContent_67\"]/form/div/div[1]/fieldset[3]/div/ng-quill-editor/div/div[1]/span[10]/span[2]/span[1]")).click();
-		System.out.println("------Text background color button clicked ---->>");
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"ql-picker-options-15\"]/span[18]")).click();
-		System.out.println("------Text background color selected ---->>");
-		Thread.sleep(3000);
-		
-		Pagedescription.click();
-		
-		Thread.sleep(2000);*/
 		
 //For the page description image has been added from below code --------------------------------------------------------------------------------
  
@@ -1321,66 +1300,7 @@ public class LoginToAppmaker {
 		driver.findElement(By.cssSelector("ng-quill-editor[name='editorText'] .ql-action")).click();
 		System.out.println("------Save button clicked ---->>");
 		Thread.sleep(3000);
-		
-		
-// From below code is for changing paragraph font type \----------------------------------------------------------------------------------------
-		
-	/*	Pagedescription.click();
-		Thread.sleep(4000);
-		Pagedescription.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
-		Thread.sleep(4000);
-		Pagedescription.sendKeys(Keys.CONTROL,"a");
-		Thread.sleep(2000);
-		
-		driver.findElement(By.className("ql-font ql-picker")).click();
-		System.out.println("------Font dropdown clicked ---->>");
-		Thread.sleep(3000);
-		
-		driver.findElement(By.className("ql-picker-item")).click();
-		System.out.println("------Font selected ---->>");
-		Thread.sleep(3000);
-		
-		
-// Blow code is to add image to the page with align center --------------------------------------------------------------------------
-		
-		Pagedescription.click();
-		Thread.sleep(2000);
-		
-		Select drpCountry = new Select(driver.findElement(By.className("ql-align ql-picker ql-icon-picker")));
-		drpCountry.selectByValue("center");
-		System.out.println("------Alignment dropdown clicked ---->>");
 	
-		
-		JavascriptExecutor js231 = (JavascriptExecutor) driver;
-		js231.executeScript("arguments[0].click();", driver.findElement(By.className("ql-image")));
-
-		robot.setAutoDelay(2000);
-
-		StringSelection stringselecton142 = new StringSelection("C:\\Appmaker Automation\\Images\\12.jpeg");
-
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselecton142, null);
-		robot.setAutoDelay(1000);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-
-		robot.setAutoDelay(2000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
-		robot.setAutoDelay(2000);
-		System.out.println("----Browse Image button clicked and image uploaded---->>");
-
-		Thread.sleep(4000);
-		System.out.println("------Page details entered---->>");
-		*/
-	
-	
-		
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
 		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
@@ -1471,7 +1391,7 @@ public class LoginToAppmaker {
 		Thread.sleep(4000);
 		
 		System.out.println("---------------------------------------Page added successfully--------------------------");
-
+*/ //uncomit here
 		
 // --------***********************************--------------------- Add new page with PDF-----------------------------------------***************************************---------------------------------------
 
@@ -1605,10 +1525,13 @@ public class LoginToAppmaker {
 		System.out.println("------Entred text to search---->>");
 	
 		System.out.println("---------------------------------------PDF page added--------------------------");
-*/
-	}
+
+	} */
 	//-----------------------------------------------***********************************************************--------------------------------	
-	
+
+
+	/* -----uncomit here  
+	 
 	@Test(priority = 12 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
@@ -1886,30 +1809,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.className("ql-underline")).click();
 		System.out.println("------Under line button clicked ---->>");
 		Thread.sleep(3000);
-		/*	
-		driver.findElement(By.xpath("//*[@id=\"dialogContent_96\"]/form/div/div[1]/fieldset[3]/div/ng-quill-editor/div/div[1]/span[10]/span[1]/span[1]")).click();
-		System.out.println("------Text color button clicked ---->>");
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"ql-picker-options-62\"]/span[3]")).click();
-		System.out.println("------Text color selected ---->>");
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"dialogContent_96\"]/form/div/div[1]/fieldset[3]/div/ng-quill-editor/div/div[1]/span[10]/span[2]/span[1]")).click();
-		System.out.println("------Text background color button clicked ---->>");
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"ql-picker-options-63\"]/span[18]")).click();
-		System.out.println("------Text background color selected ---->>");
-		Thread.sleep(3000);
-		
-		Pagedescription.click();
-		
-		Thread.sleep(2000);
-		
-//For the page description image has been added from below code --------------------------------------------------------------------------------
-	*/	
-	
 	
 		JavascriptExecutor js21 = (JavascriptExecutor) driver;
 		js21.executeScript("arguments[0].click();", driver.findElement(By.className("ql-image")));
@@ -1934,26 +1833,7 @@ public class LoginToAppmaker {
 		
 		driver.findElement(By.cssSelector("ng-quill-editor[name='editorText'] .ql-action")).click();
 		System.out.println("------Save button clicked ---->>");
-		Thread.sleep(3000);/*
-		
-		
-// From below code is for changing paragraph font type \----------------------------------------------------------------------------------------
-		
-		Pagedescription.click();
-		Thread.sleep(4000);
-		Pagedescription.sendKeys("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
-		Thread.sleep(4000);
-		Pagedescription.sendKeys(Keys.CONTROL,"a");
-		Thread.sleep(2000);
-		
-		driver.findElement(By.xpath("//*[@id=\"dialogContent_96\"]/form/div/div[1]/fieldset[3]/div/ng-quill-editor/div/div[1]/span[11]/span/span[1]")).click();
-		System.out.println("------Font dropdown clicked ---->>");
 		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//*[@id=\"ql-picker-options-64\"]/span[3]")).click();
-		System.out.println("------Font selected ---->>");
-		Thread.sleep(3000);		
-		*/
 	
 
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
@@ -2012,7 +1892,7 @@ public class LoginToAppmaker {
 
 		
 	}
-	
+/*	
 	//-----------------------------------------------------------------************************************************-----------------------
 	@Test(priority = 15 ) // (priority=6)
 	public void Delete_Page() throws Exception {
@@ -2052,7 +1932,8 @@ public class LoginToAppmaker {
 
 	//-------------------------------------------------------------------------*********************************************888-------------
 
-
+*/ //--uncomit here
+/*----uncomit here	
 	@Test(priority = 16 ) // (priority=6)
 	public void VerifyAppDetailsPages() throws Exception {
 		
@@ -2553,7 +2434,7 @@ public class LoginToAppmaker {
 		
 	}
 	
-
+/*
 	@Test(priority = 20 ) // (priority=10)
 	public void Report_A_Bug() throws Exception {
 
@@ -2579,7 +2460,7 @@ public class LoginToAppmaker {
 		System.out.println("---------------------------------------Report a bug added-------------------------->>>>");
 		
 	}
-
+*/
 	@Test(priority = 21 ) // (priority=10)
 	public void VerifyPublishSection() throws Exception {
 
