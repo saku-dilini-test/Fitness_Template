@@ -1,26 +1,20 @@
 package Test1;
 import java.awt.AWTException;
 import java.awt.Robot;
-
-import java.awt.event.KeyEvent;
-
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 //import java.ut il.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-
-import org.openqa.selenium.OutputType;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -72,7 +66,7 @@ public class LoginToAppmaker {
 	}
 
 	// Test case TC01 = Log in to the system with correct credentials
-	@Test(priority = 2)
+	@Test(priority = 2 )
 	public void VerifyLoginPage() throws Exception {
 		
 
@@ -117,7 +111,7 @@ public class LoginToAppmaker {
 		Thread.sleep(6000);
 		
 		
-		//-----------------------********************
+	/*	//-----------------------********************
 				List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
 				Thread.sleep(1000);
 				activeColumns.get(activeColumns.size() - 1).click();
@@ -128,17 +122,18 @@ public class LoginToAppmaker {
 				Thread.sleep(9000);
 				
 				
-		//-----------------------------*********************************
+		//-----------------------------**********************************/
+		
+		
 	}
 
 	// Create new App
 	
 	//-------------------------------------*********************************************************--------------------------------------------------
 
-/* ---uncomit her
- 
 
-	@Test(priority = 3) // (priority=3)
+
+	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
 		
 		System.out.println("--------------------------Starting to create new app using ASTRO template-------------------------------->>");
@@ -270,7 +265,7 @@ public class LoginToAppmaker {
 	// Create new Category
 	//------------------------------------------------------------------***************************************************-----------------------
 
-	@Test(priority = 4) // (priority=4)
+	@Test(priority = 4 ) // (priority=4)
 	public void AddNewCategory() throws Exception {
 	
 		System.out.println("--------------------------Starting to add new category-------------------------------->>");
@@ -641,7 +636,7 @@ public class LoginToAppmaker {
 	
 	//----------------------------------------------------******************************************************************************************
 	
-	@Test(priority = 7) // (priority=4)
+	@Test(priority = 7 ) // (priority=4)
 	public void Delete_Category() throws Exception {
 		
 		System.out.println("--------------------------Delete Category-------------------------------->>");
@@ -1041,10 +1036,7 @@ public class LoginToAppmaker {
 	
 	//------------------------------------------------------------------------**********************************************************************
 	// Create new page
-
-*/ //----uncomit her 
-	
-	/*-----------------uncomit
+ 
 	
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
@@ -1397,27 +1389,17 @@ public class LoginToAppmaker {
 		System.out.println("---------------------------------------Page added successfully--------------------------");
 
 	}
-	*///------uncomit---------------------------	
+		
 // --------***********************************--------------------- Add new page with PDF-----------------------------------------***************************************---------------------------------------
 
 	@Test(priority = 12 ) // (priority=5)
 	public void Add_PDF_Page() throws Exception {	
 
-		System.out.println("---------------------------------------Adding page with PDF--------------------------");
+		System.out.println("--------------------------Starting to add page with PDF -------------------------------->>");
 		
-		driver.findElement(By.name("Pages")).click();
-		System.out.println("----page clicked---->>");
-		Thread.sleep(2000);
-		
-		driver.findElement(By.name("Inner_Pages")).click();
-		System.out.println("----page clicked---->>");
-		Thread.sleep(2000);
-//-----------------------------*********************************************************************		
-	
-		
-	//	driver.findElement(By.name("Create_page_btn")).click();
-	//	Thread.sleep(4000);
-	//	System.out.println("----Create page button clicked---->>");
+		driver.findElement(By.name("Create_page_btn")).click();
+		Thread.sleep(4000);
+		System.out.println("----Create page button clicked---->>");
 		
 		driver.findElement(By.name("title")).sendKeys("Testing PDF");
 		System.out.println("----Title Entered---->>");
@@ -1546,18 +1528,10 @@ public class LoginToAppmaker {
 		System.out.println("---------------------------------------PDF page added--------------------------");
 		
 	}
-	
-	
-
-	
-	
 
 	//-----------------------------------------------***********************************************************--------------------------------	
-
-
-	/* -----uncomit here  
 	 
-	@Test(priority = 12 ) // (priority=6)
+	@Test(priority = 13 ) // (priority=6)
 	public void Edit_Page() throws Exception {
 	
 		System.out.println("---------------------------------------Going to Edit the page--------------------------");
@@ -1654,7 +1628,7 @@ public class LoginToAppmaker {
 	}
 	//-------------------------------------------------------------*******Add_Page_From_MangePages*****------------------------------------------\
 	
-	@Test(priority = 13 ) // (priority=6)
+	@Test(priority = 14 ) // (priority=6)
 	public void Add_Page_From_MangePages() throws Exception {
 	
 		System.out.println("---------------------------------------Adding page from manage pages--------------------------");
@@ -1814,7 +1788,6 @@ public class LoginToAppmaker {
 		
 // Page description section -------------------*******************************************************************-------------------------------
 		
-		
 
 		WebElement Pagedescription = driver.findElement(By.cssSelector(".ql-editor"));
 		Pagedescription.click();
@@ -1898,7 +1871,7 @@ public class LoginToAppmaker {
 	
 	}
 
-	@Test(priority = 14  ) // (priority=6)
+	@Test(priority = 15  ) // (priority=6)
 	public void From_Manage_pages_Duplcate_pages() throws Exception {
 		
 		System.out.println("---------------------------------------Duplacting pages---------------------------------->>>>");
@@ -1917,9 +1890,10 @@ public class LoginToAppmaker {
 
 		
 	}
-/*	
+	
 	//-----------------------------------------------------------------************************************************-----------------------
-	@Test(priority = 15 ) // (priority=6)
+	
+	@Test(priority = 16 ) // (priority=6)
 	public void Delete_Page() throws Exception {
 		
 		System.out.println("---------------------------------------Page deleating-------------------------->>>>");
@@ -1957,9 +1931,8 @@ public class LoginToAppmaker {
 
 	//-------------------------------------------------------------------------*********************************************888-------------
 
-*/ //--uncomit here
-/*----uncomit here	
-	@Test(priority = 16 ) // (priority=6)
+
+	@Test(priority = 17 ) // (priority=6)
 	public void VerifyAppDetailsPages() throws Exception {
 		
 		System.out.println("---------------------------------------Adding app details-------------------------->>>>");
@@ -2068,7 +2041,7 @@ public class LoginToAppmaker {
 	
 	}
 
-	@Test(priority = 17 ) // (priority=7)
+	@Test(priority = 18 ) // (priority=7)
 	public void AddLogo() throws Exception {
 		
 		System.out.println("---------------------------------------Going to add logo-------------------------->>>>");
@@ -2134,7 +2107,7 @@ public class LoginToAppmaker {
 		
 	}
 
-	@Test(priority = 18 ) // (priority=8)
+	@Test(priority = 19 ) // (priority=8)
 	public void AddFAVIcon() throws Exception {
 		
 		System.out.println("---------------------------------------Going to add FAV icon-------------------------->>>>");
@@ -2193,7 +2166,7 @@ public class LoginToAppmaker {
 
 	}
 
-	@Test(priority = 19 ) // (priority=9)
+	@Test(priority = 20 ) // (priority=9)
 	public void ChangeLookAndFeel() throws Exception {
 		
 		System.out.println("---------------------------------------Going to add Look and Feel colors-------------------------->>>>");
@@ -2459,8 +2432,8 @@ public class LoginToAppmaker {
 		
 	}
 	
-/*
-	@Test(priority = 20 ) // (priority=10)
+
+	@Test(priority = 21 ) // (priority=10)
 	public void Report_A_Bug() throws Exception {
 
 		System.out.println("---------------------------------------Going to Report a bug-------------------------->>>>");
@@ -2485,10 +2458,10 @@ public class LoginToAppmaker {
 		System.out.println("---------------------------------------Report a bug added-------------------------->>>>");
 		
 	}
-*/
+
 	
-	/*
-	@Test(priority = 21 ) // (priority=10)
+	
+	@Test(priority = 22 ) // (priority=10)
 	public void VerifyPublishSection() throws IOException, InterruptedException, AWTException {
 
 		// For this if we are creating free app we need to make all the Categories free
@@ -2619,10 +2592,12 @@ public class LoginToAppmaker {
 		
 	
 		
-	} */
-/*
-		@Test(priority = 22 ) // (priority=10)	
-		public void VerifyConfigurationSection() throws Exception {
+	} 
+
+	@Test(priority = 23 ) // (priority=10)	
+	public void VerifyConfigurationSection() throws Exception {
+		
+		System.out.println("--------------------------Starting to add configuration details -------------------------------->>");
 		
 		List<WebElement> A = driver.findElements(By.className("automation-op-config-cb-op-enabled"));
 		A.get(0).click();
@@ -2813,54 +2788,6 @@ public class LoginToAppmaker {
 		
 		List<WebElement> ccc = driver.findElements(By.name("txtAccountNumber"));
 		ccc.get(1).sendKeys("15");
-		
-		/*
-		
-		driver.findElement(By.xpath("//*[@id=\"tab-content-113\"]/div/div[2]/form/table/tbody/tr[2]/td[4]/md-checkbox/div[1]")).click();
-		System.out.println("----Enabled checkbox Clicked for Airtel---->>");
-		Thread.sleep(4000);	
-		
-		List<WebElement> aa = driver.findElements(By.name("txtAccountNumber"));
-		aa.get(2).sendKeys("1");
-				
-		Thread.sleep(2000);
-
-		driver.findElement(By.xpath("//*[@id=\"tab-content-113\"]/div/div[2]/form/table/tbody/tr[2]/td[3]/div/select")).click();
-		System.out.println("----Renewal Interval Clicked---->>");
-		Thread.sleep(4000);	
-
-		driver.findElement(By.xpath("//*[@id=\"tab-content-113\"]/div/div[2]/form/table/tbody/tr[2]/td[3]/div/select/option[2]")).click();
-		System.out.println("----Daily Clicked---->>");
-		Thread.sleep(2000);	
-
-		driver.findElement(By.xpath("//*[@id=\"tab-content-113\"]/div/div[2]/form/div/div/div/button[2]")).click();
-		System.out.println("----Save btn Clicked---->>");
-		Thread.sleep(4000);	
-		
-		String actual_msg3=driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-		String expect3="Please enter a price between 3 and 10 for AIRTEL";
-			
-		if(actual_msg3.contains(expect3))
-		{
-			System.out.println("Validation passed = "+ actual_msg3 );
-		}
-		else
-		{
-			System.out.println("Test Case Failed = "+ actual_msg3);
-		}
-
-		Thread.sleep(4000);
-		
-		List<WebElement> aaa = driver.findElements(By.name("txtAccountNumber"));
-		aaa.get(2).clear();
-		
-		Thread.sleep(4000);
-		
-		List<WebElement> aa1 = driver.findElements(By.name("txtAccountNumber"));
-		aa1.get(2).sendKeys("3"); */
-	
-	 //---------comit here ---------
-	/*
 	
 		driver.findElement(By.className("automation-op-config-btn-save")).click();
 		System.out.println("----Save btn Clicked---->>");
@@ -2878,12 +2805,13 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = "+ actual_msg5);
 		} 
 
-		
+		System.out.println("--------------------------Configuration details added -------------------------------->>");
 	}
 
-	@Test(priority = 23 ) // (priority=10)
+	@Test(priority = 24 ) // (priority=10)
 	public void web_config() throws Exception {
 		
+		System.out.println("--------------------------Starting to add website config -------------------------------->>");
 		
 		driver.findElement(By.name("website_config")).click();
 		Thread.sleep(2000);
@@ -2917,17 +2845,17 @@ public class LoginToAppmaker {
 		System.out.println("Successfully logged out ");
 		Thread.sleep(7000);
 
+		System.out.println("--------------------------Website config added -------------------------------->>");
 	}
 	
 	
 //****///////////////////////////////////////////---------Reject_App_from_super_Admin-------------///////////////////////////////////////////////////////*****/
 
-	/*-----------------------unclomit this --------------------------------
 	
-	@Test(priority= 24 ) // (priority=10)
+	@Test(priority= 25 ) // (priority=10)
 	public void Reject_App_from_super_Admin() throws Exception {
 
-		
+		System.out.println("--------------------------Going to reject app from super admin -------------------------------->>");
 		
 		driver.findElement(By.name("email")).sendKeys("su@simatosolutions.com");
 		Thread.sleep(2000);
@@ -2945,7 +2873,7 @@ public class LoginToAppmaker {
 		System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
 		Thread.sleep(2000);
 
-		File file1 = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+		File file1 = new File("/home/Images/comic/TxtWrite.txt");
 		FileReader fr = new FileReader(file1);
 		BufferedReader reader = new BufferedReader(fr);
 
@@ -2985,21 +2913,6 @@ public class LoginToAppmaker {
 		driver.findElement(By.className("automation-op-app-btn-apply-hutch")).click();
 		System.out.println("Apply button clicked = Passed");
 		Thread.sleep(10000);
-		
-		/*
-		driver.findElement(By.xpath("//*[@id=\"mat-select-3\"]")).click();
-		System.out.println("----Action CATEGORY clicked for Airtel---->>");
-		Thread.sleep(5000);
-		
-		driver.findElement(By.xpath("//*[@id=\"mat-option-14\"]")).click();
-		System.out.println("----Action CATEGORY rejected selected---->>");
-		Thread.sleep(5000);
-
-		driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]/app-operator-approval/mat-dialog-content/table/tbody/tr[3]/td[4]/button")).click();
-		System.out.println("Apply button clicked = Passed");
-		Thread.sleep(10000);*/
-
-	/*-------Uncomit this --------
 	
 		driver.findElement(By.className("automation-op-app-btn-close")).click();
 		System.out.println("Close button clicked = Passed");
@@ -3013,26 +2926,18 @@ public class LoginToAppmaker {
 		System.out.println("Logout button clicked");
 		Thread.sleep(7000);
 		
-		objWorkbk1.close();
+		reader.close();
 
-		
+		System.out.println("--------------------------App rejected from super admin -------------------------------->>");
 		
 	}
 		
-	@Test(priority= 25 ) // (priority=10)
+	@Test(priority= 26 ) // (priority=10)
 	public void Submit_For_Approve_App_Again() throws Exception {
-		
-// This code is to get new Tab in chrome browser 
-		/*driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
-		Thread.sleep(4000);
-		
-		 ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-		 driver.switchTo().window(tabs.get(0)); //switches to new tab
-		 driver.get("https://appmaker.otenro.com/app/login");*/
 		 
 // login
-	
-	/*-----------uncomit this -------------------
+
+		System.out.println("--------------------------Going to Submit app for approval again -------------------------------->>");
 		 
 		 	driver.findElement(By.name("email")).sendKeys("sakunthalanfm@gmail.com");
 			Thread.sleep(2000);
@@ -3045,13 +2950,8 @@ public class LoginToAppmaker {
 			driver.findElement(By.name("submitbtn")).click();
 			System.out.println("Login button clicked = Passed");
 			Thread.sleep(2000);
-			
-			driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
-			Thread.sleep(2000);
 
-			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]"))
-					.getAttribute("innerHTML");
+			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 			String expect = "Login Successful";
 
 			if (actual_msg.contains(expect)) {
@@ -3090,11 +2990,16 @@ public class LoginToAppmaker {
 			driver.findElement(By.className("automation-op-config-btn-save")).click();
 			System.out.println("----Save button clicked---->>");
 			Thread.sleep(5000);
-		
+			
+			System.out.println("--------------------------App Submited for approval -------------------------------->>");
+
 		}
 	
-	@Test(priority = 26 ) // (priority=10)
+	@Test(priority = 27 ) // (priority=10)
 	public void Login_Super_Admin_For_SubmitForConfig() throws Exception {
+		
+		System.out.println("--------------------------Going to submit for config from super admin -------------------------------->>");
+
 		
 		driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
 		Thread.sleep(4000);
@@ -3114,15 +3019,11 @@ public class LoginToAppmaker {
 			driver.findElement(By.name("submitbtn")).click();
 			System.out.println("Login button clicked = Passed");
 			Thread.sleep(7000);
-			
-			driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
-			Thread.sleep(2000);
 
-			File file1 = new File("C:\\Automation_with_Jenkins\\SetWithJenkins\\Sample_Maven_Project\\src\\test\\java\\Test1\\TxtWrite.txt");
+			File file1 = new File("/home/Images/comic/TxtWrite.txt");
 			FileReader fr = new FileReader(file1);
 			BufferedReader reader = new BufferedReader(fr);
-
+			
 			String str = reader.readLine();
 
 			driver.findElement(By.className("automation-home-text-search-app-details")).sendKeys(str);
@@ -3157,23 +3058,6 @@ public class LoginToAppmaker {
 			driver.findElement(By.className("automation-op-app-btn-apply-hutch")).click();
 			System.out.println("----Save button clicked---->>");
 			Thread.sleep(5000);
-			
-			
-			/*
-			driver.findElement(By.xpath("//*[@id=\"mat-select-3\"]")).click();
-			System.out.println("----Action CATEGORY clicked for Airtel---->>");
-			Thread.sleep(5000);
-			
-			driver.findElement(By.xpath("//*[@id=\"mat-option-13\"]")).click();
-			System.out.println("----Action CATEGORY Submit for Config selected---->>");
-			Thread.sleep(5000);
-			
-			driver.findElement(By.xpath("//*[@id=\"mat-dialog-0\"]/app-operator-approval/mat-dialog-content/table/tbody/tr[3]/td[4]/button")).click();
-			System.out.println("----Save button clicked---->>");
-			Thread.sleep(5000);
-			*/
-		
-/*=------------uncomit this ----------------------------------	
 	
 			driver.findElement(By.className("automation-op-app-btn-close")).click();
 			System.out.println("Close button clicked = Passed");
@@ -3187,25 +3071,21 @@ public class LoginToAppmaker {
 			System.out.println("Logout button clicked");
 			Thread.sleep(7000);
 			
-			objWorkbk1.close();
+			reader.close();
+			
+			System.out.println("-------------------------- Submited app for config -------------------------------->>");
+
 	}
 	
 	
 	
-	@Test(priority= 27 ) // (priority=10)
+	@Test(priority= 28 ) // (priority=10)
 	public void Check_App_Status() throws Exception {
-		
-// This code is to get new Tab in chrome browser 
-		/*driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
-		Thread.sleep(4000);
-		
-		 ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
-		 driver.switchTo().window(tabs.get(0)); //switches to new tab
-		 driver.get("https://appmaker.otenro.com/app/login");*/
 		 
 // login
-	
-	/*
+		
+		System.out.println("--------------------------Going to check app status from CMS -------------------------------->>");
+
 		 
 		 	driver.findElement(By.name("email")).sendKeys("sakunthalanfm@gmail.com");
 			Thread.sleep(2000);
@@ -3223,8 +3103,7 @@ public class LoginToAppmaker {
 			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
 			Thread.sleep(2000);
 
-			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]"))
-					.getAttribute("innerHTML");
+			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 			String expect = "Login Successful";
 
 			if (actual_msg.contains(expect)) {
@@ -3247,8 +3126,11 @@ public class LoginToAppmaker {
 			driver.findElement(By.name("Status")).click();
 			System.out.println("----Status button clicked---->>");
 			Thread.sleep(10000);
+			
+			System.out.println("--------------------------App status checked -------------------------------->>");
+
 	}
-	*/
+	
 	}	
 	
 
