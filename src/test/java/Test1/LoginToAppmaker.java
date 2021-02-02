@@ -1411,9 +1411,9 @@ public class LoginToAppmaker {
 //-----------------------------*********************************************************************		
 	
 		
-		driver.findElement(By.name("Create_page_btn")).click();
-		Thread.sleep(4000);
-		System.out.println("----Create page button clicked---->>");
+	//	driver.findElement(By.name("Create_page_btn")).click();
+	//	Thread.sleep(4000);
+	//	System.out.println("----Create page button clicked---->>");
 		
 		driver.findElement(By.name("title")).sendKeys("Testing PDF");
 		System.out.println("----Title Entered---->>");
