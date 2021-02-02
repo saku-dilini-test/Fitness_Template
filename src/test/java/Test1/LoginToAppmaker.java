@@ -1534,8 +1534,14 @@ public class LoginToAppmaker {
 		System.out.println("------Entred text to search---->>");
 	
 		System.out.println("---------------------------------------PDF page added--------------------------");
+		
+	}
+	
+	
 
-	} 
+	
+	
+
 	//-----------------------------------------------***********************************************************--------------------------------	
 
 
@@ -2470,6 +2476,8 @@ public class LoginToAppmaker {
 		
 	}
 */
+	
+	/*
 	@Test(priority = 21 ) // (priority=10)
 	public void VerifyPublishSection() throws IOException, InterruptedException, AWTException {
 
@@ -2597,16 +2605,11 @@ public class LoginToAppmaker {
 		
 		System.out.println("---------------------------------------Publish details added-------------------------->>>>");
 		
-		/*TakesScreenshot ts =  (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		String desti = "C:\\Users\\simato\\Documents\\screenshots";
-		File destination = new File(desti);
-
-		FileUtils.copyFile(source, new File(""));*/
 		
 		
+	
 		
-	}
+	} */
 /*
 		@Test(priority = 22 ) // (priority=10)	
 		public void VerifyConfigurationSection() throws Exception {
