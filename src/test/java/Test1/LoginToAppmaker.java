@@ -1341,21 +1341,28 @@ public class LoginToAppmaker {
 		 driver.findElement(By.cssSelector(".timeSelectIcon")).click();
 		  Thread.sleep(2000);
 		
-		for (int i = 0; i < 20; i++) {
-			 driver.findElement(By.cssSelector(".dtpIcon:nth-child(1) use")).click();
+		for (int i = 0; i < 20; i++)
+		{ 
+			driver.findElement(By.cssSelector(".dtpIcon:nth-child(1) use")).click();
 			 
-			 Thread.sleep(300); } for (int i = 0; i < 15; i++) {
+			 Thread.sleep(300);
+			 
+		} 
+		for (int i = 0; i < 15; i++) 
+		{
 			 driver.findElement(By.cssSelector(".dtpIcon:nth-child(3) use")).click();
 			 
-			 Thread.sleep(300); }
+			 Thread.sleep(300);
 			 
-			 Thread.sleep(2000); WebElement selectCalender11 =
-			 driver.findElement(By.className("iconContainer")); selectCalender11.click();
+		}
+			 
+			 Thread.sleep(2000); WebElement selectCalender11 =driver.findElement(By.className("iconContainer")); 
+			 selectCalender11.click();
 			 System.out.println("----PUBLISH DATE AND TIME Entered---->>");
-			 Thread.sleep(2000);
+			 Thread.sleep(4000);
 			 
-			 String ClassNameOfSameElements1="iconContainer"; List<WebElement>
-			 c1=driver.findElements(By.className(ClassNameOfSameElements1)) ;
+			
+			 List<WebElement>c1=driver.findElements(By.className(ClassNameOfSameElements)) ;
 			 c1.get(1).click(); 
 			 Thread.sleep(2000);
 			
