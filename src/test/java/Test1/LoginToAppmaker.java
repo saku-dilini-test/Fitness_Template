@@ -1044,16 +1044,11 @@ public class LoginToAppmaker {
 
 */ //----uncomit her 
 	
-	
+	/*-----------------uncomit
 	
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
-		
-		driver.findElement(By.name("Pages")).click();
-		System.out.println("----page clicked---->>");
-		Thread.sleep(2000);
-//-----------------------------*********************************************************************		
-		
+			
 		System.out.println("-------------------------Adding new Page -------------------------------->>");
 
 		List<WebElement> b = driver.findElements(By.name("Inner_Pages"));
@@ -1401,11 +1396,20 @@ public class LoginToAppmaker {
 		
 		System.out.println("---------------------------------------Page added successfully--------------------------");
 
-		
+	}
+	*///------uncomit---------------------------	
 // --------***********************************--------------------- Add new page with PDF-----------------------------------------***************************************---------------------------------------
 
+	@Test(priority = 12 ) // (priority=5)
+	public void Add_PDF_Page() throws Exception {	
 
 		System.out.println("---------------------------------------Adding page with PDF--------------------------");
+		
+		driver.findElement(By.name("Pages")).click();
+		System.out.println("----page clicked---->>");
+		Thread.sleep(2000);
+//-----------------------------*********************************************************************		
+	
 		
 		driver.findElement(By.name("Create_page_btn")).click();
 		Thread.sleep(4000);
@@ -1414,6 +1418,8 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("title")).sendKeys("Testing PDF");
 		System.out.println("----Title Entered---->>");
 		Thread.sleep(2000);
+		
+		Robot robot = new Robot();
 
 		JavascriptExecutor js8 = (JavascriptExecutor) driver;
 		js8.executeScript("arguments[0].click();", driver.findElement(By.id("fileInput")));
