@@ -1298,8 +1298,8 @@ public class LoginToAppmaker {
 		Thread.sleep(3000);
 	
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
-		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
+		Thread.sleep(2000);
 
 		List<WebElement> b1 = driver.findElements(By.name("mainsub_cat"));//main_category
 		b1.get(0).click();
@@ -1307,13 +1307,13 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("Enable_Comments_chekbox")).click();
-		Thread.sleep(2000);
 		System.out.println("------Enable Comments checkbox ticked ---->>");
-
+		Thread.sleep(2000);
+		
 		driver.findElement(By.name("Enable_Messaging_chekbox")).click();
-		Thread.sleep(4000);
 		System.out.println("------Enable Messaging checkbox ticked---->>");
-
+		Thread.sleep(4000);
+		
 		driver.findElement(By.className("automation-create-page-btn-publish")).click();
 		System.out.println("------Publish button clicked---->>");
 		Thread.sleep(2000);
@@ -1372,8 +1372,8 @@ public class LoginToAppmaker {
 			 Thread.sleep(4000);
 		
 			driver.findElement(By.className("automation-create-page-btn-publish")).click();
-			Thread.sleep(2000);
 			System.out.println("------Publish button clicked---->>");
+			Thread.sleep(2000);
 		
 		String actual_msg2 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect2 = "Your article has successfully been published ";
