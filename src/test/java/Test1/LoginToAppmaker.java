@@ -1315,8 +1315,8 @@ public class LoginToAppmaker {
 		System.out.println("------Enable Messaging checkbox ticked---->>");
 
 		driver.findElement(By.className("automation-create-page-btn-publish")).click();
-		Thread.sleep(2000);
 		System.out.println("------Publish button clicked---->>");
+		Thread.sleep(2000);
 		
 //--------------/////////////////////////////////////////////////------Testing date time validation ---------------////////////////////////////////
 
