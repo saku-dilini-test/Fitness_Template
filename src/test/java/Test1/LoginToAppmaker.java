@@ -1360,29 +1360,6 @@ public class LoginToAppmaker {
 			 selectCalender11.click();
 			 System.out.println("----PUBLISH DATE AND TIME Entered---->>");
 			 Thread.sleep(4000);
-			 
-			
-			 List<WebElement>c1=driver.findElements(By.className(ClassNameOfSameElements)) ;
-			 c1.get(1).click(); 
-			 Thread.sleep(2000);
-			
-			 driver.findElement(By.cssSelector(".yearMonth")).click(); 
-			 Thread.sleep(2000);
-			 
-			 driver.findElement(By.cssSelector(".yearContainer > .ng-binding")).click();
-			 Thread.sleep(2000); 
-			 
-			 driver.findElement(By.cssSelector(".monthContainer > .ng-scope:nth-child(17) > .ng-binding")).click(); 
-			 Thread.sleep(2000);
-			 
-			 driver.findElement(By.cssSelector(".ng-scope:nth-child(31) > .ng-binding")).click(); 
-			 Thread.sleep(4000);
-			 
-			 driver.findElement(By.cssSelector(".open .closeIcon")).click();
-			 Thread.sleep(2000);
-			 
-			 System.out.println("----EXPIRY DATE AND TIME Entered---->>");
-			 Thread.sleep(4000);
 		
 			driver.findElement(By.className("automation-create-page-btn-publish")).click();
 			System.out.println("------Publish button clicked---->>");
