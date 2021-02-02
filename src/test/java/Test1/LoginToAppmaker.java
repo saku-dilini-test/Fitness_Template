@@ -125,7 +125,7 @@ public class LoginToAppmaker {
 				
 				System.out.println("app selected--------------------------");
 				
-				Thread.sleep(6000);
+				Thread.sleep(9000);
 				
 				
 		//-----------------------------*********************************
@@ -1049,7 +1049,7 @@ public class LoginToAppmaker {
 	@Test(priority = 11 ) // (priority=5)
 	public void AddNewPage() throws Exception {
 		
-		driver.findElement(By.name("Pages")).sendKeys("Testing1236");
+		driver.findElement(By.name("Pages")).click();
 		System.out.println("----page clicked---->>");
 		Thread.sleep(2000);
 //-----------------------------*********************************************************************		
