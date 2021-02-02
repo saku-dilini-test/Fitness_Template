@@ -1408,6 +1408,10 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("Pages")).click();
 		System.out.println("----page clicked---->>");
 		Thread.sleep(2000);
+		
+		driver.findElement(By.name("Inner_Pages")).click();
+		System.out.println("----page clicked---->>");
+		Thread.sleep(2000);
 //-----------------------------*********************************************************************		
 	
 		
