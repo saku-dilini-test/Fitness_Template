@@ -1351,19 +1351,25 @@ public class LoginToAppmaker {
 			 
 			 Thread.sleep(2000); WebElement selectCalender11 =
 			 driver.findElement(By.className("iconContainer")); selectCalender11.click();
-			 Thread.sleep(2000);
 			 System.out.println("----PUBLISH DATE AND TIME Entered---->>");
+			 Thread.sleep(2000);
 			 
 			 String ClassNameOfSameElements1="iconContainer"; List<WebElement>
 			 c1=driver.findElements(By.className(ClassNameOfSameElements1)) ;
-			 c1.get(1).click(); Thread.sleep(2000);
-			
-			 driver.findElement(By.cssSelector(".yearMonth")).click(); Thread.sleep(2000);
-			 driver.findElement(By.cssSelector(".yearContainer > .ng-binding")).click();
-			 Thread.sleep(2000); driver.findElement(By.
-			 cssSelector(".monthContainer > .ng-scope:nth-child(17) > .ng-binding")).click(); 
+			 c1.get(1).click(); 
 			 Thread.sleep(2000);
-			 driver.findElement(By.cssSelector(".ng-scope:nth-child(31) > .ng-binding")).click(); Thread.sleep(4000);
+			
+			 driver.findElement(By.cssSelector(".yearMonth")).click(); 
+			 Thread.sleep(2000);
+			 
+			 driver.findElement(By.cssSelector(".yearContainer > .ng-binding")).click();
+			 Thread.sleep(2000); 
+			 
+			 driver.findElement(By.cssSelector(".monthContainer > .ng-scope:nth-child(17) > .ng-binding")).click(); 
+			 Thread.sleep(2000);
+			 
+			 driver.findElement(By.cssSelector(".ng-scope:nth-child(31) > .ng-binding")).click(); 
+			 Thread.sleep(4000);
 			 
 			 driver.findElement(By.cssSelector(".open .closeIcon")).click();
 			 Thread.sleep(2000);
@@ -1398,8 +1404,8 @@ public class LoginToAppmaker {
 		System.out.println("--------------------------Starting to add page with PDF -------------------------------->>");
 		
 		driver.findElement(By.name("Create_page_btn")).click();
-		Thread.sleep(4000);
 		System.out.println("----Create page button clicked---->>");
+		Thread.sleep(4000);
 		
 		driver.findElement(By.name("title")).sendKeys("Testing PDF");
 		System.out.println("----Title Entered---->>");
@@ -1465,8 +1471,8 @@ public class LoginToAppmaker {
 		
 		driver.findElement(By.id("fileInputPdf")).sendKeys("/home/Images/comic/6mbpdf.pdf");
 		Thread.sleep(2000);
+		
 		String actual_msg7 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-
 		System.out.println("----pdf uploaded---->>");
 
 		String expect7 = "Try Again  Maximum PDF file size allowed is 5MB !";
@@ -1478,12 +1484,12 @@ public class LoginToAppmaker {
 		}
 		
 		driver.findElement(By.name("checkb_Load_PDF")).click();
-		Thread.sleep(2000);
 		System.out.println("----PDF check box clicked---->>");
+		Thread.sleep(2000);
 		
 		driver.findElement(By.name("checkb_Load_PDF")).click();
-		Thread.sleep(4000);
 		System.out.println("----PDF check box clicked---->>");
+		Thread.sleep(4000);
 		
 		JavascriptExecutor js4 = (JavascriptExecutor) driver;
 		js4.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("div:nth-child(1) > .btn")));
@@ -1491,12 +1497,12 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(2000);
 		
 		driver.findElement(By.id("fileInputPdf")).sendKeys("/home/Images/comic/file-example_PDF_1MB.pdf");
-		robot.setAutoDelay(2000);
 		System.out.println("----pdf uploaded---->>");
+		robot.setAutoDelay(2000);
 		
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
-		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
+		Thread.sleep(2000);
 
 		List<WebElement> b3 = driver.findElements(By.name("mainsub_cat"));
 		b3.get(0).click();
@@ -1504,8 +1510,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		
 		driver.findElement(By.className("automation-create-page-btn-publish")).click();
-		Thread.sleep(2000);
 		System.out.println("------Publish button clicked---->>");
+		Thread.sleep(2000);
 
 		String actual_msg4 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect4 = "Your article has successfully been published ";
@@ -1601,16 +1607,16 @@ public class LoginToAppmaker {
 		}
 		
 		driver.findElement(By.name("chk_videoUrl2")).click();
-		Thread.sleep(2000);
 		System.out.println("------ Youtub video checkbox ticked---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("videoUrl3")).sendKeys("https://www.youtube.com/watch?v=XAh2FujZ-0g");
-		Thread.sleep(2000);
 		System.out.println("------Youtube video url entered---->>");
+		Thread.sleep(2000);
 		
 		driver.findElement(By.name("update_btn")).click();
-		Thread.sleep(2000);
 		System.out.println("------Update button clicked---->>");
+		Thread.sleep(2000);
 
 		String actual_msg4 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect4 = "Your article has successfully been published ";
@@ -1634,12 +1640,13 @@ public class LoginToAppmaker {
 		System.out.println("---------------------------------------Adding page from manage pages--------------------------");
 
 		driver.findElement(By.name("Create_page_btn")).click();
-		Thread.sleep(2000);
 		System.out.println("------ Create_page_btn clicked---->>");
+		Thread.sleep(2000);
 		
 		driver.findElement(By.name("title")).sendKeys("Page 2");
 		System.out.println("----Title Entered---->>");
 		Thread.sleep(2000);
+		
 		Robot robot = new Robot();
 		
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
@@ -1648,14 +1655,11 @@ public class LoginToAppmaker {
 
 //Below code is for capturing image validation part, image should be less than 5 mb
 		
-		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");
-				
+		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/5mbimage.jpg");	
 		robot.setAutoDelay(100);
+		
 		String actual_msg21 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-
-
 		robot.setAutoDelay(2000);
-		System.out.println("----Browse Image button clicked and image uploaded---->>");
 		
 		String expect21 = "Image should be less than 5MB";
 
@@ -1727,12 +1731,12 @@ public class LoginToAppmaker {
 		Thread.sleep(5000);
 
 		driver.findElement(By.name("chk_videoUrl1")).click();
-		Thread.sleep(2000);
 		System.out.println("------ Youtub video checkbox ticked---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.cssSelector("#videoUrl2")).sendKeys("https://www.youtube.com/watch?v=XAh2FujZ-0g");
-		Thread.sleep(2000);
 		System.out.println("------Youtube video url entered---->>");
+		Thread.sleep(2000);
 		
 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 		js2.executeScript("arguments[0].click();", driver.findElement(By.name("Select_Img_btn")));
@@ -1740,8 +1744,8 @@ public class LoginToAppmaker {
 		robot.setAutoDelay(2000);
 
 		driver.findElement(By.id("fileInput")).sendKeys("/home/Images/comic/Comic5.jpg");
-
 		robot.setAutoDelay(2000);
+		
 		System.out.println("----Browse Image button clicked and image uploaded---->>");
 
 		{
@@ -1835,8 +1839,8 @@ public class LoginToAppmaker {
 	
 
 		driver.findElement(By.name("search_categ")).sendKeys("Test004");
-		Thread.sleep(2000);
 		System.out.println("------search_category text entered ---->>");
+		Thread.sleep(2000);
 
 		List<WebElement> b1 = driver.findElements(By.name("mainsub_cat"));
 		b1.get(0).click();
@@ -1844,16 +1848,16 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("Enable_Comments_chekbox")).click();
-		Thread.sleep(2000);
 		System.out.println("------Enable Comments checkbox ticked ---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("Enable_Messaging_chekbox")).click();
-		Thread.sleep(4000);
 		System.out.println("------Enable Messaging checkbox ticked---->>");
+		Thread.sleep(4000);
 
 		driver.findElement(By.className("automation-create-page-btn-publish")).click();
-		Thread.sleep(2000);
 		System.out.println("------Publish button clicked---->>");
+		Thread.sleep(2000);
 
 		String actual_msg2 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect2 = "Your article has successfully been published ";
@@ -1883,8 +1887,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		
 		driver.findElement(By.name("Duplicate_btn")).click();
-		Thread.sleep(2000);
 		System.out.println("------Duplicate_btn clicked---->>");
+		Thread.sleep(2000);
 		
 		System.out.println("---------------------------------------Pages Duplacted------------------------------------>>>>");
 
@@ -1905,13 +1909,13 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 		
 		driver.findElement(By.cssSelector(".auto-btn-managepage-delete")).click();
-		Thread.sleep(4000);
 		System.out.println("------delete button clicked---->>");
+		Thread.sleep(4000);
 		
 		List<WebElement> confirm = driver.findElements(By.className("me-default-button"));
 		confirm.get(1).click();
-		Thread.sleep(2000);
 		System.out.println("------confirm button clicked---->>");
+		Thread.sleep(2000);
 		
 		Select dropdown = new Select(driver.findElement(By.className("automation-manage-pages-sel-status")));
 		dropdown.selectByVisibleText("To be published");
@@ -1919,7 +1923,6 @@ public class LoginToAppmaker {
 		Thread.sleep(3000);
 
 		driver.findElement(By.cssSelector(".auto-btn-managepage-cancel")).click();
-		Thread.sleep(2000);
 		System.out.println("------Cancel_btn clicked---->>");
 
 		Thread.sleep(6000);
@@ -1946,23 +1949,23 @@ public class LoginToAppmaker {
 
 		driver.findElement(By.name("address")).clear();
 		driver.findElement(By.name("address")).sendKeys("213/1 kurunegala");
-		Thread.sleep(2000);
 		System.out.println("----ADDRESS entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("telPhone")).clear();
 		driver.findElement(By.name("telPhone")).sendKeys("0776567766767");
-		Thread.sleep(2000);
 		System.out.println("----TELEPHONE entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("email")).clear();
 		driver.findElement(By.name("email")).sendKeys("saku@gmail.com");
-		Thread.sleep(2000);
 		System.out.println("----EMAIL entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("website")).clear();
 		driver.findElement(By.name("website")).sendKeys("http/www.test.com");
-		Thread.sleep(2000);
 		System.out.println("----Website entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("next_btn")).click();
 		System.out.println("----Next button clicked---->>");
@@ -1983,8 +1986,8 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("termsAndCondition")).sendKeys("In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant Company Name a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media.\r\n"
 						+ "\r\n"
 						+ "Your Content must be your own and must not be invading any third-party's rights. Company Name reserves the right to remove any of Your Content from this Website at any time without notice.");
-		Thread.sleep(2000);
 		System.out.println("----TERMS AND CONDITIONS entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("privacyPolicy")).clear();
 		driver.findElement(By.name("privacyPolicy")).sendKeys("Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Website Name, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.");
@@ -2015,12 +2018,13 @@ public class LoginToAppmaker {
 		driver.findElement(By.name("content")).sendKeys("One small touch to take away from Toyota is considering putting people front and center, rather than products, on these pages (they’re about the people that make up your company, as much as they’re about what you make or sell, after all).\r\n"
 						+ "\r\n"
 						+ "Plus, the simple navigation bar works well to make it easy to move around the page, too:");
-		Thread.sleep(2000);
+		
 		System.out.println("----Content entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("finish_btn")).click();
-		Thread.sleep(2000);
 		System.out.println("----Finish button clicked---->>");
+		Thread.sleep(2000);
 
 		String actual_msg2 = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 		String expect2 = "About us updated";
@@ -2209,8 +2213,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("Navigationbackcolor")).sendKeys("rgba(171,216,228,1)");
-		Thread.sleep(2000);
 		System.out.println("---Navigation color name entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("Navigationbackcolor")).click();
 		Thread.sleep(2000);
@@ -2223,8 +2227,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("navigationFontcolor")).sendKeys("rgba(237,17,62,1)");
-		Thread.sleep(2000);
 		System.out.println("----Color name entered for Navigation Font Color---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("navigationFontcolor")).click();
 		Thread.sleep(2000);
@@ -2287,8 +2291,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.className("automation-looknfeel-text-header-font-color")).sendKeys("rgba(34,33,236,1)");
-		Thread.sleep(2000);
 		System.out.println("----Header Font Color entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.className("automation-looknfeel-text-header-font-color")).click();
 		Thread.sleep(2000);
@@ -2349,8 +2353,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("content_font")).sendKeys("rgba(39,177,228,1)");
-		Thread.sleep(2000);
 		System.out.println("----Content Font Color entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("content_font")).click();
 		Thread.sleep(2000);
@@ -2376,8 +2380,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("footer_back_color")).sendKeys("rgba(67,42,42,1)");
-		Thread.sleep(2000);
 		System.out.println("----Footer Background Color entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("footer_back_color")).click();
 		Thread.sleep(2000);
@@ -2403,8 +2407,8 @@ public class LoginToAppmaker {
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("footer_header_color")).sendKeys("rgba(238,252,53,1)");
-		Thread.sleep(2000);
 		System.out.println("----footer_header_color entered---->>");
+		Thread.sleep(2000);
 
 		driver.findElement(By.name("footer_header_color")).click();
 		Thread.sleep(2000);
