@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class LoginToAppmaker {
+public class Fitness_Test {
 
 	public String baseURL ="https://appmakercms.otenro.com/app/login";
 	public String ResetPasswordURL = "https://appmaker.otenro.com/app/resetPassword/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVkOTJmNDAwMTZlYmUyNmQ1YjhiOGVmZCIsImVtYWlsIjoic2FrdW50aGFsYW5mbUBnbWFpbC5jb20iLCJpYXQiOjE1NzAwOTIwMDB9.kr02qnxDVijmzwhnrb717czXZA7Hf99ikGgrcd3XQZg";
@@ -95,9 +95,12 @@ public class LoginToAppmaker {
 		System.out.println("Login button clicked = Passed");
 		Thread.sleep(3000);
 		
-		driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-		System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
-		Thread.sleep(2000);
+		List<WebElement> x = driver.findElements(By.className("auto-login-dialog-btn-yes"));
+
+		if (x.size() > 0)
+		{
+		    x.get(0).click();
+		}
 
 		String actual_msg = driver.findElement(By.cssSelector(".toast-message")).getAttribute("innerHTML");
 		String expect = "Login Successful";
@@ -153,9 +156,14 @@ public class LoginToAppmaker {
 		driver.navigate().refresh();
 		Thread.sleep(5000);
 
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement Element = driver.findElement(By.xpath("//*[@id=\"tab-content-0\"]/div/div[6]/div/div[2]/div[1]"));
+		js.executeScript("arguments[0].scrollIntoView();", Element);
+		Thread.sleep(2000);
+
 		List<WebElement> a = driver.findElements(By.name("New_Templates"));
-		a.get(0).click();
-		System.out.println("Astro Template selected ");
+		a.get(4).click();
+		System.out.println("Fitness Template selected ");
 		Thread.sleep(4000);
 		
 		
@@ -209,7 +217,7 @@ public class LoginToAppmaker {
 		String generatedString = buffer.toString();
 
 		WebElement App = driver.findElement(By.name("appName"));
-		App.sendKeys(generatedString +" Astro");
+		App.sendKeys(generatedString +" Fitness");
 		Thread.sleep(2000);
 
 		WebElement Appname = driver.findElement(By.name("appName"));
@@ -2857,8 +2865,13 @@ public class LoginToAppmaker {
 		System.out.println("Login button clicked = Passed");
 		Thread.sleep(8000);
 		
-		driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-		System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
+		List<WebElement> x = driver.findElements(By.className("auto-login-dialog-btn-yes"));
+
+		if (x.size() > 0)
+		{
+		    x.get(0).click();
+		}
+		
 		Thread.sleep(2000);
 
 		File file1 = new File("/home/Images/comic/TxtWrite.txt");
@@ -2939,16 +2952,18 @@ public class LoginToAppmaker {
 			System.out.println("Login button clicked = Passed");
 			Thread.sleep(2000);
 
-			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-			String expect = "Login Successful";
+			List<WebElement> x = driver.findElements(By.className("auto-login-dialog-btn-yes"));
 
-			if (actual_msg.contains(expect)) {
-				System.out.println("Validation passed = " + actual_msg);
-			} else {
-				System.out.println("Test Case Failed = " + actual_msg);
+			if (x.size() > 0)
+			{
+			    x.get(0).click();
 			}
 
-			Thread.sleep(7000);
+			Thread.sleep(5000);
+			
+			driver.manage().deleteAllCookies();
+			System.out.println("All cookies Deleted");
+			Thread.sleep(10000);;
 
 			List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
 			Thread.sleep(1000);
@@ -3007,6 +3022,15 @@ public class LoginToAppmaker {
 			driver.findElement(By.name("submitbtn")).click();
 			System.out.println("Login button clicked = Passed");
 			Thread.sleep(7000);
+			
+			List<WebElement> x = driver.findElements(By.className("auto-login-dialog-btn-yes"));
+
+			if (x.size() > 0)
+			{
+			    x.get(0).click();
+			}
+			
+			Thread.sleep(2000);
 
 			File file1 = new File("/home/Images/comic/TxtWrite.txt");
 			FileReader fr = new FileReader(file1);
@@ -3087,9 +3111,12 @@ public class LoginToAppmaker {
 			System.out.println("Login button clicked = Passed");
 			Thread.sleep(2000);
 			
-			driver.findElement(By.className("auto-login-dialog-btn-yes")).click();
-			System.out.println("You are already logged into an active session. Proceeding with this new session will result in you being logged out of your active session and any unsaved progress being lost. Please confirm to proceed. = Clicked ok Button");
-			Thread.sleep(2000);
+			List<WebElement> x = driver.findElements(By.className("auto-login-dialog-btn-yes"));
+
+			if (x.size() > 0)
+			{
+			    x.get(0).click();
+			}
 
 			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
 			String expect = "Login Successful";
@@ -3100,6 +3127,10 @@ public class LoginToAppmaker {
 				System.out.println("Test Case Failed = " + actual_msg);
 			}
 
+			Thread.sleep(5000);
+			
+			driver.manage().deleteAllCookies();
+			System.out.println("All cookies Deleted");
 			Thread.sleep(7000);
 
 			List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
