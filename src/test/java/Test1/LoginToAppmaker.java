@@ -79,36 +79,46 @@ public class LoginToAppmaker {
 		System.out.println("All cookies Deleted");
 		Thread.sleep(5000);
 
-		//driver.findElement(By.name("Login_btn")).click();
-		//Thread.sleep(2000);
-		//System.out.println("Login button clicked = Passed");
+		driver.findElement(By.name("email")).sendKeys("saakunthalan1fm@gmail.com");
+		Thread.sleep(2000);
+		System.out.println("Terminated Email entered = Passed");
 
+		driver.findElement(By.name("password")).sendKeys("Saku@12345");
+		System.out.println("Password entered = Passed");
+		Thread.sleep(2000);
+
+		driver.findElement(By.name("submitbtn")).click();
+		System.out.println("Login button clicked = Passed");
+		Thread.sleep(2000);
+
+		String actual_msg = driver.findElement(By.className("toast-message")).getAttribute("innerHTML");
+		String expect = "Access denied. Your trying to login from an account that has been terminated";
+
+		if (actual_msg.contains(expect)) {
+			System.out.println("Validation passed = " + actual_msg);
+		} else {
+			System.out.println("Test Case Failed = " + actual_msg);
+		}
+	
+		driver.findElement(By.name("email")).clear();
 		driver.findElement(By.name("email")).sendKeys("sakunthalanfm@gmail.com");
 		Thread.sleep(2000);
 		System.out.println("Email entered = Passed");
 
+		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys("Saku@1234");
 		System.out.println("Password entered = Passed");
 		Thread.sleep(2000);
 
 		driver.findElement(By.name("submitbtn")).click();
 		System.out.println("Login button clicked = Passed");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		
 		List<WebElement> x = driver.findElements(By.className("auto-login-dialog-btn-yes"));
 
 		if (x.size() > 0)
 		{
 		    x.get(0).click();
-		}
-
-		String actual_msg = driver.findElement(By.cssSelector(".toast-message")).getAttribute("innerHTML");
-		String expect = "Login Successful";
-
-		if (actual_msg.contains(expect)) {
-			System.out.println("Validation passed = " + actual_msg);
-		} else {
-			System.out.println("Test Case Failed = " + actual_msg);
 		}
  
 		Thread.sleep(6000);
@@ -3116,15 +3126,6 @@ public class LoginToAppmaker {
 			if (x.size() > 0)
 			{
 			    x.get(0).click();
-			}
-
-			String actual_msg = driver.findElement(By.xpath("//*[@id=\"toast-container\"]/div/div/div[2]")).getAttribute("innerHTML");
-			String expect = "Login Successful";
-
-			if (actual_msg.contains(expect)) {
-				System.out.println("Validation passed = " + actual_msg);
-			} else {
-				System.out.println("Test Case Failed = " + actual_msg);
 			}
 
 			Thread.sleep(5000);
