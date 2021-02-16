@@ -149,7 +149,7 @@ public class LoginToAppmaker {
 	@Test(priority = 3 ) // (priority=3)
 	public void CreateNewApp() throws Exception {
 		
-		System.out.println("--------------------------Starting to create new app using ASTRO template-------------------------------->>");
+		System.out.println("--------------------------Starting to create new app using Fitness template-------------------------------->>");
 
 		driver.findElement(By.name("Create_New_App")).click();
 		System.out.println("Select a app button clicked");
@@ -2311,14 +2311,14 @@ public class LoginToAppmaker {
 			System.out.println("Test Case Failed = " + actual_msg5);
 		}
 		
-		Thread.sleep(4000);
+		Thread.sleep(7000);
 		
 //////////////////////////////////////////////////-----------------Content Font----------------------/////////////////////////////////////////////////
 		
 		Select dropdown2 = new Select(driver.findElement(By.className("automation-looknfeel-select-content-font")));
 		dropdown2.selectByVisibleText("Poppins");
 		System.out.println("----Content Font dropdown clicked---->>");
-		Thread.sleep(4000);	
+		Thread.sleep(1000);	
 
 		String actual_msg6 = driver.findElement(By.className("toast-message")).getAttribute("innerHTML");
 		String expect6 = "Content Font Successfully Updated";
@@ -2336,7 +2336,7 @@ public class LoginToAppmaker {
 		Select dropdown3 = new Select(driver.findElement(By.className("automation-looknfeel-select-content-font-weight")));
 		dropdown3.selectByVisibleText("bolder");
 		System.out.println("----Content Font Weight dropdown clicked---->>");
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 
 		String actual_msg7 = driver.findElement(By.className("toast-message")).getAttribute("innerHTML");
 		String expect7 = "Content Font Weight Successfully Updated";
