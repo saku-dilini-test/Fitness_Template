@@ -2254,7 +2254,7 @@ public class LoginToAppmaker {
 		Select dropdown = new Select(driver.findElement(By.className("automation-looknfeel-select-header-font")));
 		dropdown.selectByVisibleText("Alfaslab One");
 		System.out.println("------Header Font dropdown clicked ---->>");
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		
 		String actual_msg3 = driver.findElement(By.className("toast-message")).getAttribute("innerHTML");
 		String expect3 = "Header Font Successfully Updated";
@@ -2273,7 +2273,7 @@ public class LoginToAppmaker {
 		Select dropdown1 = new Select(driver.findElement(By.className("automation-looknfeel-select-header-font-weight")));
 		dropdown1.selectByVisibleText("bold");
 		System.out.println("----Header Font Weight dropdown clicked---->>");
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		
 		String actual_msg4 = driver.findElement(By.className("toast-message")).getAttribute("innerHTML");
 		String expect4 = "Header Font Weight Successfully Updated";
