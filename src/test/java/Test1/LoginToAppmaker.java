@@ -2885,7 +2885,7 @@ public class LoginToAppmaker {
 		    x.get(0).click();
 		}
 		
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 		File file1 = new File("/home/Images/comic/TxtWrite.txt");
 		FileReader fr = new FileReader(file1);
@@ -2905,7 +2905,7 @@ public class LoginToAppmaker {
 //-----Need to check this 		
 		
 		driver.findElement(By.className("automation-op-app-sel-action-dialog")).click();
-		System.out.println("----Action CATEGORY clicked---->>");
+		System.out.println("----Action CATEGORY clicked for dialog---->>");
 		Thread.sleep(5000);
 		
 		driver.findElement(By.className("automation-op-app-sel-action-opt-dialog-rejected")).click();
@@ -2921,7 +2921,7 @@ public class LoginToAppmaker {
 		Thread.sleep(5000);
 		
 		driver.findElement(By.className("automation-op-app-sel-action-opt-hutch-rejected")).click();
-		System.out.println("----Action CATEGORY clicked for hutch---->>");
+		System.out.println("----Action CATEGORY reject selected for hutch---->>");
 		Thread.sleep(5000);
 
 		driver.findElement(By.className("automation-op-app-btn-apply-hutch")).click();
@@ -2976,7 +2976,12 @@ public class LoginToAppmaker {
 			
 			driver.manage().deleteAllCookies();
 			System.out.println("All cookies Deleted");
-			Thread.sleep(10000);;
+			Thread.sleep(5000);
+			
+			driver.navigate().refresh();
+			driver.navigate().refresh();
+			Thread.sleep(9000);
+
 
 			List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
 			Thread.sleep(1000);
@@ -3135,7 +3140,12 @@ public class LoginToAppmaker {
 			
 			driver.manage().deleteAllCookies();
 			System.out.println("All cookies Deleted");
-			Thread.sleep(7000);
+			Thread.sleep(5000);
+			
+			driver.navigate().refresh();
+			driver.navigate().refresh();
+			Thread.sleep(9000);
+
 
 			List<WebElement> activeColumns = driver.findElements(By.name("Created_Apps"));
 			Thread.sleep(1000);
