@@ -170,12 +170,14 @@ public class LoginToAppmaker {
 		Thread.sleep(5000);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		WebElement Element = driver.findElement(By.xpath("//*[@id=\"tab-content-0\"]/div/div[6]/div/div[2]/div[1]"));
+		WebElement Element = driver.findElement(By.className("auto-btn-select-Fitness"));
 		js.executeScript("arguments[0].scrollIntoView();", Element);
-		Thread.sleep(2000);
-
-		List<WebElement> a = driver.findElements(By.name("New_Templates"));
-		a.get(4).click();
+		Thread.sleep(4000);
+	
+		WebElement fitness = driver.findElement(By.className("auto-btn-select-Fitness"));
+		JavascriptExecutor js1= (JavascriptExecutor) driver;
+		js1.executeScript("arguments[0].click();", fitness); 
+		Thread.sleep(5000);
 		System.out.println("Fitness Template selected ");
 		Thread.sleep(4000);
 		
